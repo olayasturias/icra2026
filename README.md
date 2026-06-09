@@ -2,7 +2,8 @@
 
 Builds `data/metadata.json` from the ICRA 2026 proceedings downloaded from the
 ICRA website. One record per paper PDF, with fields: `title`, `keywords`, `id`
-(= paper PDF filename, e.g. `0011`), `abstract`, `authors`.
+(= paper PDF filename, e.g. `0011`), `code` (repo/project-page URL, or `""`),
+`abstract`, `authors`.
 
 ## Input layout (`data/raw/`, not committed)
 
@@ -48,6 +49,19 @@ first page when an id is absent from the TOC.
 | authors  | 2665   | 7 not in the TOC fall back to the paper's author block ("First Last" vs the TOC's "Last, First") |
 | abstract | 2665   | 4 sourced via `manual_overrides.json` (see below) |
 | keywords | 758    | only ~28% of papers print an `Index Terms` block; it is optional in the IEEE template |
+| code     | 922    | URL of the paper's code repo / project page, when the PDF links one |
+
+### Code links
+
+`code` is the URL of the paper's own repository or project page (GitHub, GitLab,
+Bitbucket, `*.github.io`, Hugging Face), scanned from all pages' text and the PDF
+hyperlink annotations. To separate the paper's code from cited tools, a repo is
+taken when introduced by a code-intent phrase ("code available at", "project
+page", "we release", …) or when it is the only repo link in the paper; when
+several repos appear with no such cue it is left empty (avoids tagging a
+dependency). Line-wrapped URLs are rejoined and common library repos (opencv,
+pytorch, mmsegmentation, …) are filtered out. A few cited tools still slip
+through; treat `code` as high-but-not-perfect precision.
 
 ### `manual_overrides.json`
 

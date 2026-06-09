@@ -227,6 +227,109 @@ _MEMBER = re.compile(
     r"(?i)\b(?:student|senior|graduate)?\s*(?:member|fellow)\s*(?:member)?\s*,?\s*ieee\b"
 )
 _MARKS = re.compile(r"[\d\*∗†‡§¶∥]+")
+
+# --- code-repository link ---------------------------------------------------
+
+_URL = re.compile(r"https?://[^\s)>\]}\"']+", re.IGNORECASE)
+_CODEHOST = re.compile(
+    r"(?:github\.com|gitlab\.com|bitbucket\.org|codeberg\.org|github\.io"
+    r"|huggingface\.co)",
+    re.IGNORECASE,
+)
+# Phrases that mark a repo as the paper's own released code (vs. a cited tool).
+_INTENT = re.compile(
+    r"(?:source\s+code|\bcode\b|codebase|implementation|project\s+page"
+    r"|project\s+website|open[\s-]?source|released?|available\s+at|repositor"
+    r"|we\s+release|our\s+code)",
+    re.IGNORECASE,
+)
+# Well-known third-party tool/library repos that are dependencies, not the
+# paper's own code.
+_DEP = re.compile(
+    r"github\.com/(?:opencv|pytorch|tensorflow|MichaelGrupp/evo|borglab/gtsam"
+    r"|Farama-Foundation|openai/gym|huggingface/transformers|google-research"
+    r"|open-mmlab|facebookresearch/detectron|ultralytics|CompVis|Stability-AI)"
+    r"|gymnasium",
+    re.IGNORECASE,
+)
+_REPO_HOST = re.compile(r"github\.com|gitlab\.com|bitbucket\.org|codeberg\.org", re.I)
+
+
+def _clean_url(u: str) -> str:
+    return re.sub(r"[).,;:'\"\]>/]+$", "", u.strip())
+
+
+def _dewrap(text: str, m: re.Match) -> str:
+    """Re-join a URL split across lines.
+
+    A trailing '-' is an unambiguous line-break hyphenation, so always rejoin.
+    A trailing '/' only rejoins for code-repo hosts (the next line is the repo
+    name) -- for github.io *project pages* the following text is usually prose
+    (e.g. "Index Terms"), so rejoining there would corrupt the URL.
+    """
+    u, end = m.group(), m.end()
+    repo = bool(_REPO_HOST.search(u))
+    for _ in range(3):
+        if end < len(text) and text[end] == "\n" and (
+            u.endswith("-") or (u.endswith("/") and repo)
+        ):
+            nxt = text[end + 1 :].split("\n", 1)[0]
+            tok = re.match(r"[\w%./~#?=&+-]+", nxt)
+            if not tok:
+                break
+            u += tok.group()
+            end += 1 + tok.end()
+        else:
+            break
+    return u
+
+
+def _has_path(u: str) -> bool:
+    m = _CODEHOST.search(u)
+    if not m:
+        return False
+    if u[m.end() :].strip("/."):
+        return True
+    # A bare project page like "motif-1k.github.io" is itself a valid link.
+    return bool(re.search(r"[\w-]+\.github\.io$", u, re.I))
+
+
+def extract_code(full_text: str, ann_uris: list[str]) -> str:
+    """Best-guess URL of the paper's own code repository, or "" if none.
+
+    Prefers a repo introduced by a code-intent phrase ("code available at ...");
+    otherwise accepts a lone repo link; stays silent when several repos appear
+    with no cue (likely cited tools, not the paper's code).
+    """
+    cands: list[str] = []
+    seen: set[str] = set()
+    for u in ann_uris:
+        cu = _clean_url(u)
+        if _CODEHOST.search(cu) and cu not in seen:
+            seen.add(cu)
+            cands.append(cu)
+    intent_urls: list[str] = []
+    for m in _URL.finditer(full_text):
+        cu = _clean_url(_dewrap(full_text, m))
+        if not _CODEHOST.search(cu):
+            continue
+        if cu not in seen:
+            seen.add(cu)
+            cands.append(cu)
+        if _INTENT.search(full_text[max(0, m.start() - 100) : m.start()]):
+            intent_urls.append(cu)
+
+    def usable(u: str) -> bool:
+        return _has_path(u) and not _DEP.search(u)
+
+    intent_urls = [u for u in intent_urls if usable(u)]
+    cands = [u for u in cands if usable(u)]
+    if intent_urls:
+        gh = [u for u in intent_urls if re.search(r"github\.com|gitlab|bitbucket", u, re.I)]
+        return (gh or intent_urls)[0]
+    if len(cands) == 1:
+        return cands[0]
+    return ""
 _NAME_PIECE = re.compile(r"[A-Z][\w.'’\-]*(?: [A-Za-z][\w.'’\-]*){1,4}")
 
 
@@ -297,9 +400,16 @@ def parse_paper(pdf: Path) -> dict:
         text = "\n".join(
             doc[p].get_text("text") for p in range(min(2, doc.page_count))
         ).translate(ZW)
+        # Code links can sit anywhere (abstract footnote, intro, conclusion), so
+        # scan all pages' text plus every hyperlink annotation.
+        all_text = "\n".join(p.get_text("text") for p in doc).translate(ZW)
+        ann_uris = [
+            l["uri"] for p in doc for l in p.get_links() if l.get("uri")
+        ]
     # Some Type-1-font PDFs render the em-dash as "Ð" (e.g. "AbstractÐ ...",
     # "Index TermsÐ ..."), which hides the marker from the regexes below.
     text = text.replace("Ð", "—")
+    code = extract_code(all_text, ann_uris)
     ab = ABSTRACT.search(text) or ABSTRACT_LOOSE.search(text)
     kw = KEYWORDS.search(text)
     keywords: list[str] = []
@@ -315,6 +425,7 @@ def parse_paper(pdf: Path) -> dict:
         "authors": authors,
         "abstract": clean(ab.group(1)) if ab else "",
         "keywords": keywords,
+        "code": code,
     }
 
 
@@ -346,16 +457,18 @@ def main(argv: list[str] | None = None) -> int:
         else:
             no_toc += 1
             title, authors = meta["title"], meta["authors"]
-        abstract, keywords = meta["abstract"], meta["keywords"]
+        abstract, keywords, code = meta["abstract"], meta["keywords"], meta["code"]
         if ov := overrides.get(pid):
             applied += 1
             abstract = ov.get("abstract", abstract)
             keywords = ov.get("keywords", keywords)
+            code = ov.get("code", code)
         records.append(
             {
                 "title": title or meta["title"],
                 "keywords": keywords,
                 "id": pid,
+                "code": code,
                 "abstract": abstract,
                 "authors": authors,
             }
@@ -371,6 +484,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"  {no_toc} papers had no TOC entry (title & authors from the PDF)")
     print(f"  {applied} manual overrides applied")
     print(f"  {no_abstract} papers still have no abstract")
+    print(f"  {sum(1 for r in records if r['code'])} papers have a code link")
     return 0
 
 
