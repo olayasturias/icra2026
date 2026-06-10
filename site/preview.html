@@ -11,28 +11,31 @@
   <title>ICRA 2026 Topic Map</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --tm-bg:#0b0e14; --tm-surface:#11161f; --tm-surface-2:#161c27;
-      --tm-border:#222a38; --tm-border-soft:#1b2230;
-      --tm-text:#e6edf6; --tm-muted:#8b97a8; --tm-faint:#5b6675;
-      --tm-accent:#7bb7ff; --tm-accent-dim:#2a3f5c;
-      --tm-shadow:0 8px 30px rgba(0,0,0,.45);
+      --tm-bg:#0a0c16; --tm-surface:#11152a; --tm-surface-2:#171c34;
+      --tm-border:#222a45; --tm-border-soft:#1a2038;
+      --tm-text:#e8eefb; --tm-muted:#8b95b5; --tm-faint:#5a637f;
+      --tm-accent:#58C4DD; --tm-accent-dim:#234a5a;
+      --tm-shadow:0 10px 38px rgba(0,0,0,.55);
       --tm-radius:12px;
     }
     * { box-sizing:border-box; }
     html,body { margin:0; }
     body {
-      font-family:"Inter",-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      background:radial-gradient(1200px 600px at 70% -10%, #131a26 0%, var(--tm-bg) 60%);
+      font-family:"Source Serif 4",Charter,Georgia,Cambria,"Times New Roman",serif;
+      background:
+        radial-gradient(1100px 560px at 72% -12%, #16213f 0%, rgba(10,12,22,0) 60%),
+        radial-gradient(900px 500px at 8% 110%, #122033 0%, rgba(10,12,22,0) 55%),
+        var(--tm-bg);
       color:var(--tm-text); min-height:100vh; padding:2rem clamp(1rem,4vw,3rem);
       -webkit-font-smoothing:antialiased; letter-spacing:.1px;
     }
     .tm-app { max-width:1320px; margin:0 auto; }
     header.tm-head { margin-bottom:1.2rem; }
-    .tm-eyebrow { font-size:.72rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--tm-accent); opacity:.85; }
-    h1 { margin:.25rem 0 .35rem; font-size:1.7rem; font-weight:700; line-height:1.15; }
+    .tm-eyebrow { font-size:.72rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--tm-accent); }
+    h1 { margin:.3rem 0 .4rem; font-family:"Source Serif 4",Charter,Georgia,serif; font-size:2rem; font-weight:600; line-height:1.1; letter-spacing:.2px; }
     .tm-sub { margin:0; color:var(--tm-muted); font-size:.95rem; max-width:70ch; line-height:1.5; }
 
     #tm-controls { display:flex; gap:.6rem; align-items:center; margin:1.2rem 0 .6rem; flex-wrap:wrap; }
@@ -71,14 +74,14 @@
     #tm-panel::-webkit-scrollbar-thumb:hover { background:#36425a; }
 
     .tm-topic-head { position:sticky; top:0; background:linear-gradient(var(--tm-surface),rgba(17,22,31,.85)); backdrop-filter:blur(4px); border-left:4px solid #888; padding:.6rem .8rem; margin:0 0 .4rem; z-index:1; }
-    .tm-topic-head h3 { margin:0 0 .15rem; font-size:1.05rem; font-weight:650; }
+    .tm-topic-head h3 { margin:0 0 .15rem; font-family:"Source Serif 4",Charter,Georgia,serif; font-size:1.15rem; font-weight:600; }
     .tm-topic-head .tm-meta { font-size:.75rem; letter-spacing:.04em; text-transform:uppercase; color:var(--tm-muted); }
 
     ol.tm-papers { list-style:none; padding:0 .5rem; margin:0; }
     li.tm-paper { padding:.55rem .2rem; border-bottom:1px solid var(--tm-border-soft); }
     li.tm-paper:last-child { border-bottom:0; }
     .tm-badge { display:inline-flex; align-items:center; justify-content:center; width:1.35em; height:1.35em; font-size:.62rem; font-weight:700; border-radius:5px; margin-right:.5rem; color:#0b0e14; vertical-align:middle; }
-    .tm-badge.tm-P { background:var(--tm-accent); } .tm-badge.tm-W { background:#ff7b86; }
+    .tm-badge.tm-P { background:var(--tm-accent); } .tm-badge.tm-W { background:#FC6255; }
     .tm-title { cursor:pointer; font-size:.9rem; line-height:1.4; color:var(--tm-text); transition:color .12s; }
     li.tm-paper:hover .tm-title { color:var(--tm-accent); }
     .tm-abstract { font-size:.84rem; line-height:1.55; margin:.5rem 0 .2rem 1.85em; padding:.6rem .8rem; color:#cdd6e2; background:var(--tm-surface-2); border:1px solid var(--tm-border-soft); border-radius:9px; }

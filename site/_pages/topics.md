@@ -14,23 +14,26 @@ description: An interactive map of ICRA 2026 — proceedings and workshop papers
   regardless of the site theme. Cytoscape + fcose load from a CDN below.
 -->
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
 
 <style>
   .tm-app {
-    --tm-bg:#0b0e14; --tm-surface:#11161f; --tm-surface-2:#161c27;
-    --tm-border:#222a38; --tm-border-soft:#1b2230;
-    --tm-text:#e6edf6; --tm-muted:#8b97a8; --tm-faint:#5b6675;
-    --tm-accent:#7bb7ff; --tm-accent-dim:#2a3f5c; --tm-radius:12px;
-    background:radial-gradient(1100px 520px at 72% -12%, #131a26 0%, var(--tm-bg) 62%);
+    --tm-bg:#0a0c16; --tm-surface:#11152a; --tm-surface-2:#171c34;
+    --tm-border:#222a45; --tm-border-soft:#1a2038;
+    --tm-text:#e8eefb; --tm-muted:#8b95b5; --tm-faint:#5a637f;
+    --tm-accent:#58C4DD; --tm-accent-dim:#234a5a; --tm-radius:12px;
+    background:
+      radial-gradient(1000px 480px at 74% -14%, #16213f 0%, rgba(10,12,22,0) 60%),
+      radial-gradient(820px 460px at 6% 112%, #122033 0%, rgba(10,12,22,0) 55%),
+      var(--tm-bg);
     color:var(--tm-text); border:1px solid var(--tm-border); border-radius:16px;
-    padding:1.4rem clamp(1rem,3vw,1.8rem) 1.6rem; margin:1rem 0 1.5rem;
-    box-shadow:0 12px 40px rgba(0,0,0,.4);
-    font-family:"Inter",-apple-system,Segoe UI,Roboto,sans-serif; letter-spacing:.1px;
+    padding:1.5rem clamp(1rem,3vw,1.9rem) 1.7rem; margin:1rem 0 1.5rem;
+    box-shadow:0 14px 44px rgba(0,0,0,.5);
+    font-family:"Source Serif 4",Charter,Georgia,Cambria,"Times New Roman",serif; letter-spacing:.1px;
   }
   .tm-app * { box-sizing:border-box; }
-  .tm-app .tm-eyebrow { font-size:.72rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--tm-accent); opacity:.85; }
-  .tm-app h2.tm-h { margin:.3rem 0 .35rem; font-size:1.5rem; font-weight:700; color:var(--tm-text); border:0; padding:0; }
+  .tm-app .tm-eyebrow { font-size:.72rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--tm-accent); }
+  .tm-app h2.tm-h { margin:.3rem 0 .4rem; font-family:"Source Serif 4",Charter,Georgia,serif; font-size:1.7rem; font-weight:600; color:var(--tm-text); border:0; padding:0; }
   .tm-app .tm-sub { margin:0; color:var(--tm-muted); font-size:.92rem; max-width:72ch; line-height:1.5; }
 
   .tm-app #tm-controls { display:flex; gap:.6rem; align-items:center; margin:1.1rem 0 .6rem; flex-wrap:wrap; }
@@ -51,13 +54,13 @@ description: An interactive map of ICRA 2026 — proceedings and workshop papers
   .tm-app #tm-panel::-webkit-scrollbar-thumb { background:#2a3342; border-radius:8px; border:2px solid var(--tm-surface); }
 
   .tm-app .tm-topic-head { position:sticky; top:0; background:linear-gradient(var(--tm-surface),rgba(17,22,31,.85)); backdrop-filter:blur(4px); border-left:4px solid #888; padding:.6rem .8rem; margin:0 0 .4rem; z-index:1; }
-  .tm-app .tm-topic-head h3 { margin:0 0 .15rem; font-size:1.02rem; font-weight:650; color:var(--tm-text); }
+  .tm-app .tm-topic-head h3 { margin:0 0 .15rem; font-family:"Source Serif 4",Charter,Georgia,serif; font-size:1.12rem; font-weight:600; color:var(--tm-text); }
   .tm-app .tm-topic-head .tm-meta { font-size:.74rem; letter-spacing:.04em; text-transform:uppercase; color:var(--tm-muted); }
   .tm-app ol.tm-papers { list-style:none; padding:0 .5rem; margin:0; }
   .tm-app li.tm-paper { padding:.55rem .2rem; border-bottom:1px solid var(--tm-border-soft); }
   .tm-app li.tm-paper:last-child { border-bottom:0; }
   .tm-app .tm-badge { display:inline-flex; align-items:center; justify-content:center; width:1.35em; height:1.35em; font-size:.62rem; font-weight:700; border-radius:5px; margin-right:.5rem; color:#0b0e14; vertical-align:middle; }
-  .tm-app .tm-badge.tm-P { background:var(--tm-accent); } .tm-app .tm-badge.tm-W { background:#ff7b86; }
+  .tm-app .tm-badge.tm-P { background:var(--tm-accent); } .tm-app .tm-badge.tm-W { background:#FC6255; }
   .tm-app .tm-title { cursor:pointer; font-size:.9rem; line-height:1.4; color:var(--tm-text); transition:color .12s; }
   .tm-app li.tm-paper:hover .tm-title { color:var(--tm-accent); }
   .tm-app .tm-abstract { font-size:.84rem; line-height:1.55; margin:.5rem 0 .2rem 1.85em; padding:.6rem .8rem; color:#cdd6e2; background:var(--tm-surface-2); border:1px solid var(--tm-border-soft); border-radius:9px; }

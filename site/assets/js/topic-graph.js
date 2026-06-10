@@ -18,18 +18,19 @@
 
   var BASE = (window.TOPIC_DATA_BASE || "./").replace(/\/?$/, "/");
 
-  // Coarse super-category -> colour (tuned for a dark canvas).
+  // Coarse super-category -> colour. 3Blue1Brown / Manim palette.
   var GROUP_COLORS = {
-    "Estimation & Mapping": "#6ea8fe",
-    "Perception": "#5fd49a",
-    "Learning": "#ff7b86",
-    "Manipulation": "#ffae54",
-    "Locomotion & Platforms": "#4dd0c4",
-    "Planning & Control": "#f4d35e",
-    "Applications": "#c792ea",
-    "Methods & Tooling": "#c2a079",
+    "Estimation & Mapping": "#58C4DD",   // BLUE
+    "Perception": "#5CD0B3",             // TEAL
+    "Learning": "#F0AC5F",               // GOLD
+    "Manipulation": "#FC6255",           // RED
+    "Locomotion & Platforms": "#83C167", // GREEN
+    "Planning & Control": "#E8C547",     // YELLOW
+    "Applications": "#CF8DE5",           // PURPLE
+    "Methods & Tooling": "#E07A9B",      // MAROON/PINK
   };
-  var DEFAULT_COLOR = "#9aa4b2";
+  var DEFAULT_COLOR = "#9CDCEB";
+  var ACCENT = "#58C4DD"; // 3b1b signature blue
 
   function esc(s) {
     return (s == null ? "" : String(s)).replace(/[&<>"']/g, function (c) {
@@ -82,31 +83,32 @@
       style: [
         { selector: "node", style: {
           "background-color": "data(color)",
+          "background-opacity": 0.96,
           "width": "data(size)", "height": "data(size)",
           "label": "data(label)",
           "font-size": 11, "font-weight": 600,
-          "font-family": "Inter, -apple-system, Segoe UI, Roboto, sans-serif",
-          "color": "#f2f6fc",
+          "font-family": "\"Source Serif 4\", Charter, Georgia, serif",
+          "color": "#eef4ff",
           "text-valign": "center", "text-halign": "center",
           "text-wrap": "wrap", "text-max-width": "data(size)",
-          "text-outline-color": "#0b0e14", "text-outline-width": 2.2,
-          "border-width": 1.5, "border-color": "#0b0e14", "border-opacity": 0.6,
-          "transition-property": "opacity background-color border-color",
-          "transition-duration": "140ms",
+          "text-outline-color": "#0a0c16", "text-outline-width": 2.6,
+          // circular ring (no box); transparent until highlighted
+          "border-width": 3, "border-color": "data(color)", "border-opacity": 0,
+          "transition-property": "opacity border-opacity border-width",
+          "transition-duration": "150ms",
         }},
         { selector: "edge", style: {
-          "width": "data(width)", "line-color": "#46506a",
-          "curve-style": "haystack", "haystack-radius": 0, "opacity": 0.45,
+          "width": "data(width)", "line-color": "#39507a",
+          "curve-style": "haystack", "haystack-radius": 0, "opacity": 0.5,
         }},
         { selector: "node:selected", style: {
-          "border-width": 3.5, "border-color": "#7bb7ff", "border-opacity": 1,
-          "overlay-color": "#7bb7ff", "overlay-opacity": 0.18, "overlay-padding": 8,
+          "border-width": 5, "border-color": ACCENT, "border-opacity": 1,
         }},
         { selector: "node.hl", style: {
-          "border-color": "#7bb7ff", "border-opacity": 0.9,
+          "border-width": 3, "border-color": ACCENT, "border-opacity": 0.85,
         }},
-        { selector: "edge.hl", style: { "line-color": "#7bb7ff", "opacity": 0.85 } },
-        { selector: ".faded", style: { "opacity": 0.07, "text-opacity": 0.05 } },
+        { selector: "edge.hl", style: { "line-color": ACCENT, "opacity": 0.9 } },
+        { selector: ".faded", style: { "opacity": 0.06, "text-opacity": 0.04 } },
         { selector: ".hl", style: { "opacity": 1, "text-opacity": 1 } },
       ],
       layout: window.cytoscapeFcose
