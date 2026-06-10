@@ -119,18 +119,37 @@
     });
 
     // --- interactions -------------------------------------------------------
-    function showTopic(node) {
-      var d = node.data();
-      var ids = (d.paperIds || []).slice();
-      ids.sort(function (a, b) {
+    var panel = el("tm-panel");
+    var info = {};  // topic id -> {label, group, color, count}
+    graph.nodes.forEach(function (n) {
+      info[n.id] = { label: n.label, group: n.group, count: n.count,
+                     color: GROUP_COLORS[n.group] || DEFAULT_COLOR };
+    });
+
+    // Search state: a query restricts which papers are listed/clickable.
+    var matchSet = null;   // Set<paperId> matching the query, or null when no query
+    var matchQuery = "";
+
+    function paperMatches(p, q) {
+      if (p.title && p.title.toLowerCase().indexOf(q) !== -1) return true;
+      if (p.authors) {
+        for (var i = 0; i < p.authors.length; i++) {
+          if (String(p.authors[i]).toLowerCase().indexOf(q) !== -1) return true;
+        }
+      }
+      return false;
+    }
+
+    function renderPapers(ids, headHtml) {
+      ids = ids.slice().sort(function (a, b) {
         return (papers[a] ? papers[a].title : a).localeCompare(papers[b] ? papers[b].title : b);
       });
-      var html = '<div class="tm-topic-head" style="border-color:' + esc(d.color) + '">' +
-        '<h3>' + esc(d.label) + "</h3>" +
-        '<span class="tm-meta">' + esc(d.group) + " · " + d.count + " papers</span></div>" +
-        '<ol class="tm-papers">';
+      var html = headHtml + '<ol class="tm-papers">';
+      if (!ids.length) {
+        html += '<li class="tm-paper"><span class="tm-hint">No papers.</span></li>';
+      }
       ids.forEach(function (pid) {
-        var p = papers[pid] || { title: pid, abstract: "" };
+        var p = papers[pid] || { title: pid, source: "" };
         var badge = p.source === "workshop" ? "W" : "P";
         html += '<li class="tm-paper" data-pid="' + esc(pid) + '">' +
           '<span class="tm-badge tm-' + badge + '">' + badge + "</span>" +
@@ -138,9 +157,8 @@
           '<div class="tm-abstract" hidden></div></li>';
       });
       html += "</ol>";
-      var panel = el("tm-panel");
       panel.innerHTML = html;
-      panel.querySelectorAll(".tm-paper").forEach(function (li) {
+      panel.querySelectorAll(".tm-paper[data-pid]").forEach(function (li) {
         li.querySelector(".tm-title").addEventListener("click", function () {
           var pid = li.getAttribute("data-pid");
           var box = li.querySelector(".tm-abstract");
@@ -148,7 +166,6 @@
           var p = papers[pid] || {};
           var meta = [];
           if (p.authors && p.authors.length) meta.push(esc(p.authors.slice(0, 8).join(", ")));
-          // Proceedings paper id as recorded in the metadata (pp:0011 -> 0011).
           if (p.source === "proceedings" && pid.indexOf("pp:") === 0) {
             meta.push("Paper ID " + esc(pid.slice(3)));
           }
@@ -165,37 +182,99 @@
       });
     }
 
+    function topicHead(tid, ids) {
+      var t = info[tid] || { label: tid, group: "", color: DEFAULT_COLOR };
+      var sub = esc(t.group) + " · " + ids.length + " papers";
+      if (matchSet) sub += ' matching “' + esc(matchQuery) + '”';
+      return '<div class="tm-topic-head" style="border-color:' + esc(t.color) + '">' +
+        "<h3>" + esc(t.label) + "</h3><span class=\"tm-meta\">" + sub + "</span></div>";
+    }
+
+    // Show a topic's papers (intersected with the active search, if any).
+    function showTopic(tid) {
+      var ids = (info[tid] ? (graphPaperIds[tid] || []) : []).slice();
+      if (matchSet) ids = ids.filter(function (p) { return matchSet.has(p); });
+      renderPapers(ids, topicHead(tid, ids));
+    }
+
+    // paperIds per topic, kept off the cy nodes for convenience
+    var graphPaperIds = {};
+    graph.nodes.forEach(function (n) { graphPaperIds[n.id] = n.paperIds || []; });
+
+    function showSearchResults() {
+      var ids = [];
+      matchSet.forEach(function (pid) { ids.push(pid); });
+      var head = '<div class="tm-topic-head" style="border-color:' + ACCENT + '">' +
+        "<h3>" + ids.length + ' result' + (ids.length === 1 ? "" : "s") + "</h3>" +
+        '<span class="tm-meta">matching “' + esc(matchQuery) +
+        '” · click a highlighted topic to refine</span></div>';
+      renderPapers(ids, head);
+    }
+
+    function highlightTopics(topicSet) {
+      cy.batch(function () {
+        cy.elements().addClass("faded").removeClass("hl");
+        cy.nodes().unselect();
+        cy.nodes().forEach(function (n) {
+          if (topicSet.has(n.id())) { n.removeClass("faded").addClass("hl"); }
+        });
+        cy.edges().forEach(function (e) {
+          if (topicSet.has(e.source().id()) && topicSet.has(e.target().id())) {
+            e.removeClass("faded").addClass("hl");
+          }
+        });
+      });
+    }
+
+    function clearSearch() {
+      matchSet = null; matchQuery = "";
+      cy.elements().removeClass("faded hl");
+      cy.nodes().unselect();
+      showIntro();
+    }
+
+    // --- node click: list papers (refines within a search) ------------------
     cy.on("tap", "node", function (evt) {
       var node = evt.target;
-      cy.elements().addClass("faded").removeClass("hl");
-      node.removeClass("faded").addClass("hl");
-      node.neighborhood().removeClass("faded").addClass("hl");
-      showTopic(node);
+      if (matchSet) {
+        cy.nodes().unselect(); node.select();   // keep search highlight, mark focus
+      } else {
+        cy.batch(function () {
+          cy.elements().addClass("faded").removeClass("hl");
+          node.removeClass("faded").addClass("hl");
+          node.neighborhood().removeClass("faded").addClass("hl");
+        });
+      }
+      showTopic(node.id());
     });
     cy.on("tap", function (evt) {
-      if (evt.target === cy) { cy.elements().removeClass("faded hl"); }
+      if (evt.target === cy && !matchSet) { cy.elements().removeClass("faded hl"); }
     });
 
-    // --- search + reset -----------------------------------------------------
+    // --- search -------------------------------------------------------------
     var search = el("tm-search");
     if (search) {
       search.addEventListener("input", function () {
         var q = search.value.trim().toLowerCase();
-        if (!q) { cy.elements().removeClass("faded hl"); return; }
-        cy.elements().addClass("faded").removeClass("hl");
-        var match = cy.nodes().filter(function (n) {
-          return n.data("label").toLowerCase().indexOf(q) !== -1 ||
-                 n.data("group").toLowerCase().indexOf(q) !== -1;
+        if (!q) { clearSearch(); return; }
+        matchQuery = q;
+        matchSet = new Set();
+        var topicsHit = new Set();
+        Object.keys(papers).forEach(function (pid) {
+          if (paperMatches(papers[pid], q)) {
+            matchSet.add(pid);
+            (papers[pid].topics || []).forEach(function (t) { topicsHit.add(t); });
+          }
         });
-        match.removeClass("faded").addClass("hl");
-        match.connectedEdges().connectedNodes().removeClass("faded").addClass("hl");
+        highlightTopics(topicsHit);
+        showSearchResults();
       });
     }
     var reset = el("tm-reset");
     if (reset) {
       reset.addEventListener("click", function () {
         if (search) search.value = "";
-        cy.elements().removeClass("faded hl");
+        clearSearch();
         cy.fit(undefined, 30);
       });
     }
@@ -208,11 +287,11 @@
       }).join("");
     }
 
-    var intro = el("tm-panel");
-    if (intro && !intro.innerHTML.trim()) {
-      intro.innerHTML = '<p class="tm-hint">Click a topic to list its papers (' +
+    function showIntro() {
+      panel.innerHTML = '<p class="tm-hint">Search paper titles &amp; authors above, or click a topic. ' +
         graph.meta.papers + ' papers across ' + graph.nodes.length +
-        ' topics). Click a paper title to read its abstract.</p>';
+        ' topics. Click a paper title to read its abstract.</p>';
     }
+    showIntro();
   }
 })();
