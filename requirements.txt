@@ -1,0 +1,18 @@
+# scripts/proceedings/build_metadata.py and scripts/workshops/extract_workshop_papers.py
+pymupdf>=1.24
+
+# scripts/topics/tag_topics.py — LLM topic tagging via Claude Haiku 4.5.
+# Needs ANTHROPIC_API_KEY in the environment (or an `ant auth login` profile).
+anthropic>=0.40
+
+# scripts/workshops/build_workshops.py and arxiv_search.py use only the Python
+# standard library (urllib, json, http.client) — no extra dependencies.
+
+# scripts/stats/ — figures rendered with Manim. Install in an isolated venv
+# (manim pulls numpy 2.x / scipy and will clash with a conda base env):
+#   python -m venv .venv
+#   .venv/Scripts/python -m pip install -r requirements.txt
+# scripts/stats/naming_stats.py itself is stdlib-only; only rendering needs these.
+manim>=0.18
+imageio-ffmpeg>=0.5   # provides an ffmpeg binary so Manim can encode video
+

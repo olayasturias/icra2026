@@ -31,14 +31,16 @@ from pathlib import Path
 
 import fitz  # PyMuPDF
 
-ROOT = Path(__file__).resolve().parent
-RAW = ROOT / "data" / "raw" / "data"
+# scripts/proceedings/build_metadata.py -> repo root is two parents up.
+ROOT = Path(__file__).resolve().parents[2]
+SCRIPT_DIR = Path(__file__).resolve().parent
+RAW = ROOT / "data" / "proceedings" / "data"
 TOC_PDF = RAW / "TOC.pdf"
 PAPERS_DIR = RAW / "papers"
 OUT_JSON = ROOT / "data" / "metadata.json"
 # Hand-sourced abstract/keywords for papers whose text layer has none (image-only
 # scans, or magazine articles with no "Abstract" label). See the file's _note.
-OVERRIDES_JSON = ROOT / "manual_overrides.json"
+OVERRIDES_JSON = SCRIPT_DIR / "manual_overrides.json"
 
 
 def load_overrides() -> dict[str, dict]:
@@ -55,6 +57,9 @@ PP = re.compile(r"(?<![A-Za-z])pp\.")                        # "pp." page marker
 NAME = re.compile(r"^[A-Z][\w'’.\-]+(?: [A-Z][\w'’.\-]+)*,\s+[A-Z].*$")
 TIME = re.compile(r"^\d{1,2}:\d{2}-\d{1,2}:\d{2}$")          # "09:00-10:30"
 PAPER_LINK = re.compile(r"papers/(\d+)\.pdf$")
+# Each paper with an uploaded "visual" (supplementary video) has a
+# papers/NNNN_VI_fi.mp4 link in the TOC; this equals the "Attachment" marker.
+VIDEO_LINK = re.compile(r"papers/(\d+)_VI_fi\.mp4$")
 
 
 def title_ends(line: str) -> bool:
@@ -108,6 +113,23 @@ def clean(text: str) -> str:
 
 
 # --- TOC parsing -----------------------------------------------------------
+
+
+def parse_visuals() -> set[str]:
+    """Ids of papers that have an uploaded visual (video), per TOC.pdf.
+
+    The live rasevents site is login-gated and unreachable here, but the TOC --
+    generated from the same program database -- links a papers/NNNN_VI_fi.mp4
+    for every paper that has a visual, so presence is read offline from it.
+    """
+    doc = fitz.open(TOC_PDF)
+    ids: set[str] = set()
+    for page in doc:
+        for l in page.get_links():
+            m = VIDEO_LINK.search(l.get("file", "") or "")
+            if m:
+                ids.add(m.group(1))
+    return ids
 
 
 def parse_toc() -> dict[str, dict]:
@@ -439,7 +461,8 @@ def main(argv: list[str] | None = None) -> int:
 
     print("Parsing TOC.pdf ...")
     toc = parse_toc()
-    print(f"  {len(toc)} entries mapped to paper ids")
+    visuals = parse_visuals()
+    print(f"  {len(toc)} entries mapped to paper ids; {len(visuals)} have a visual")
 
     overrides = load_overrides()
     pdfs = sorted(PAPERS_DIR.glob("*.pdf"))
@@ -469,6 +492,7 @@ def main(argv: list[str] | None = None) -> int:
                 "keywords": keywords,
                 "id": pid,
                 "code": code,
+                "visual": pid in visuals,
                 "abstract": abstract,
                 "authors": authors,
             }
@@ -485,6 +509,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"  {applied} manual overrides applied")
     print(f"  {no_abstract} papers still have no abstract")
     print(f"  {sum(1 for r in records if r['code'])} papers have a code link")
+    print(f"  {sum(1 for r in records if r['visual'])} papers have a visual")
     return 0
 
 

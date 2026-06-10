@@ -1,0 +1,118 @@
+<!doctype html>
+<!--
+  Local preview of the ICRA 2026 topic map (mirrors _pages/topics.md without Jekyll).
+  Run from the site/ directory:   python -m http.server 8000
+  then open                       http://localhost:8000/preview.html
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ICRA 2026 Topic Map</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --tm-bg:#0b0e14; --tm-surface:#11161f; --tm-surface-2:#161c27;
+      --tm-border:#222a38; --tm-border-soft:#1b2230;
+      --tm-text:#e6edf6; --tm-muted:#8b97a8; --tm-faint:#5b6675;
+      --tm-accent:#7bb7ff; --tm-accent-dim:#2a3f5c;
+      --tm-shadow:0 8px 30px rgba(0,0,0,.45);
+      --tm-radius:12px;
+    }
+    * { box-sizing:border-box; }
+    html,body { margin:0; }
+    body {
+      font-family:"Inter",-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background:radial-gradient(1200px 600px at 70% -10%, #131a26 0%, var(--tm-bg) 60%);
+      color:var(--tm-text); min-height:100vh; padding:2rem clamp(1rem,4vw,3rem);
+      -webkit-font-smoothing:antialiased; letter-spacing:.1px;
+    }
+    .tm-app { max-width:1320px; margin:0 auto; }
+    header.tm-head { margin-bottom:1.2rem; }
+    .tm-eyebrow { font-size:.72rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--tm-accent); opacity:.85; }
+    h1 { margin:.25rem 0 .35rem; font-size:1.7rem; font-weight:700; line-height:1.15; }
+    .tm-sub { margin:0; color:var(--tm-muted); font-size:.95rem; max-width:70ch; line-height:1.5; }
+
+    #tm-controls { display:flex; gap:.6rem; align-items:center; margin:1.2rem 0 .6rem; flex-wrap:wrap; }
+    #tm-search {
+      flex:1; min-width:200px; padding:.6rem .9rem; font-size:.92rem; color:var(--tm-text);
+      background:var(--tm-surface); border:1px solid var(--tm-border); border-radius:10px; outline:none;
+      transition:border-color .15s, box-shadow .15s;
+    }
+    #tm-search::placeholder { color:var(--tm-faint); }
+    #tm-search:focus { border-color:var(--tm-accent-dim); box-shadow:0 0 0 3px rgba(123,183,255,.12); }
+    #tm-reset {
+      padding:.6rem 1rem; font-size:.9rem; font-weight:500; color:var(--tm-text); cursor:pointer;
+      background:var(--tm-surface); border:1px solid var(--tm-border); border-radius:10px;
+      transition:background .15s, border-color .15s;
+    }
+    #tm-reset:hover { background:var(--tm-surface-2); border-color:var(--tm-accent-dim); }
+
+    #tm-legend { display:flex; flex-wrap:wrap; gap:.5rem .9rem; margin:.2rem 0 1rem; font-size:.78rem; color:var(--tm-muted); }
+    #tm-legend .tm-leg { display:inline-flex; align-items:center; gap:.4rem; }
+    #tm-legend i { width:11px; height:11px; border-radius:3px; display:inline-block; box-shadow:0 0 0 1px rgba(0,0,0,.4); }
+
+    #tm-wrap { display:flex; gap:1rem; align-items:stretch; flex-wrap:wrap; }
+    #tm-graph {
+      flex:2 1 520px; height:min(72vh,720px); min-width:320px;
+      background:
+        radial-gradient(900px 480px at 30% 0%, #0f141d 0%, #0a0d12 70%),
+        var(--tm-bg);
+      border:1px solid var(--tm-border); border-radius:var(--tm-radius); box-shadow:var(--tm-shadow);
+    }
+    #tm-panel {
+      flex:1 1 320px; max-height:min(72vh,720px); overflow:auto; padding:.25rem .35rem .5rem;
+      background:var(--tm-surface); border:1px solid var(--tm-border); border-radius:var(--tm-radius);
+    }
+    #tm-panel::-webkit-scrollbar { width:10px; }
+    #tm-panel::-webkit-scrollbar-thumb { background:#2a3342; border-radius:8px; border:2px solid var(--tm-surface); }
+    #tm-panel::-webkit-scrollbar-thumb:hover { background:#36425a; }
+
+    .tm-topic-head { position:sticky; top:0; background:linear-gradient(var(--tm-surface),rgba(17,22,31,.85)); backdrop-filter:blur(4px); border-left:4px solid #888; padding:.6rem .8rem; margin:0 0 .4rem; z-index:1; }
+    .tm-topic-head h3 { margin:0 0 .15rem; font-size:1.05rem; font-weight:650; }
+    .tm-topic-head .tm-meta { font-size:.75rem; letter-spacing:.04em; text-transform:uppercase; color:var(--tm-muted); }
+
+    ol.tm-papers { list-style:none; padding:0 .5rem; margin:0; }
+    li.tm-paper { padding:.55rem .2rem; border-bottom:1px solid var(--tm-border-soft); }
+    li.tm-paper:last-child { border-bottom:0; }
+    .tm-badge { display:inline-flex; align-items:center; justify-content:center; width:1.35em; height:1.35em; font-size:.62rem; font-weight:700; border-radius:5px; margin-right:.5rem; color:#0b0e14; vertical-align:middle; }
+    .tm-badge.tm-P { background:var(--tm-accent); } .tm-badge.tm-W { background:#ff7b86; }
+    .tm-title { cursor:pointer; font-size:.9rem; line-height:1.4; color:var(--tm-text); transition:color .12s; }
+    li.tm-paper:hover .tm-title { color:var(--tm-accent); }
+    .tm-abstract { font-size:.84rem; line-height:1.55; margin:.5rem 0 .2rem 1.85em; padding:.6rem .8rem; color:#cdd6e2; background:var(--tm-surface-2); border:1px solid var(--tm-border-soft); border-radius:9px; }
+    .tm-abstract .tm-authors { font-size:.8rem; font-style:italic; color:var(--tm-muted); margin-bottom:.4rem; }
+    .tm-abstract .tm-links { margin-top:.5rem; font-size:.8rem; }
+    .tm-abstract a, .tm-sub a { color:var(--tm-accent); text-decoration:none; }
+    .tm-abstract a:hover { text-decoration:underline; }
+    .tm-hint { color:var(--tm-muted); font-size:.9rem; line-height:1.5; padding:1.2rem 1rem; }
+    .tm-error { color:#ff7b86; font-size:.9rem; padding:1rem; }
+  </style>
+</head>
+<body>
+  <div class="tm-app">
+    <header class="tm-head">
+      <div class="tm-eyebrow">ICRA 2026 · Proceedings &amp; Workshops</div>
+      <h1>Topic Map</h1>
+      <p class="tm-sub">3,028 papers across 43 topics. Node size is the number of papers; edges link topics that share papers. Click a topic to list its papers, then a title to read the abstract.</p>
+    </header>
+    <div id="tm-controls">
+      <input id="tm-search" type="search" placeholder="Filter topics — SLAM, manipulation, aerial…" />
+      <button id="tm-reset" type="button">Reset</button>
+    </div>
+    <div id="tm-legend"></div>
+    <div id="tm-wrap">
+      <div id="tm-graph"></div>
+      <div id="tm-panel"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/layout-base@2.0.1/layout-base.js"></script>
+  <script src="https://unpkg.com/cose-base@2.2.0/cose-base.js"></script>
+  <script src="https://unpkg.com/cytoscape@3.30.2/dist/cytoscape.min.js"></script>
+  <script src="https://unpkg.com/cytoscape-fcose@2.2.0/cytoscape-fcose.js"></script>
+  <script>window.TOPIC_DATA_BASE = "assets/json/";</script>
+  <script src="assets/js/topic-graph.js"></script>
+</body>
+</html>

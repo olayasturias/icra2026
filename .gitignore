@@ -1,9 +1,10 @@
-# Secrets / browser session
-.secrets/
-storage_state.json
-
-# Downloaded data
+# Data: large inputs (proceedings/workshop PDFs) and generated outputs
+# (metadata.json, workshops.json). Committed inputs live under scripts/.
 data/
+
+# Throwaway analysis artifacts
+scratch/
+scripts/workshops/workshop_titles_arxiv.json
 
 # Python
 __pycache__/

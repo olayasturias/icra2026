@@ -1,0 +1,3056 @@
+[
+  {
+    "name": "Digital Twins for UAV Autonomy: From Model-Based Design to Verified Deployment",
+    "type": "tutorial",
+    "day": "Monday",
+    "url": "https://www.mathworks.com/company/events/tradeshows/icra-2026-5136850.html",
+    "organizers": [
+      "Moiz Khan (MathWorks)",
+      "YJ Lim (MathWorks)",
+      "Roberto G. Valenti (MathWorks)"
+    ],
+    "speakers": [
+      "Giuseppe Loianno (UC Berkeley)",
+      "Elia Kaufmann (Skydio)",
+      "Ronal George (MathWorks)"
+    ],
+    "talks": [
+      {
+        "title": "Design a UAV Digital Twin and Mission Simulation",
+        "speaker": "Ronal George"
+      },
+      {
+        "title": "Apply Model-Based Design with Integrated Verification and Validation in Simulink",
+        "speaker": "Marco Roggero"
+      },
+      {
+        "title": "PX4 and ArduPilot Autopilot Deployment with HIL",
+        "speaker": "Arun Mathamkode"
+      },
+      {
+        "title": "Panel Discussion: Future Directions and Closing the Sim-to-Real Gap",
+        "speaker": ""
+      }
+    ],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Riemann and Gauss meet Asimov: 3rd Tutorial on Geometric Methods in Robot Learning, Optimization and Control",
+    "type": "tutorial",
+    "day": "Monday",
+    "url": "https://sites.google.com/view/icra-2026-tutorial-geometry/",
+    "organizers": [
+      "Noemie Jaquier (KTH)",
+      "Leonel Rozo (IT:AI for Industry)",
+      "Soren Hauberg (DTU)",
+      "Hans-Peter Schrocker (Universitat Innsbruck)",
+      "Andras Kupcsik (Bosch Center for AI)"
+    ],
+    "speakers": [
+      "Ross Hatton (Oregon State University)",
+      "Dian Wang (Stanford University)",
+      "Eduardo Bayro-Corrochano (Poznan University of Technology)"
+    ],
+    "talks": [
+      {
+        "title": "The geometry of locomotion",
+        "speaker": "Ross Hatton"
+      },
+      {
+        "title": "Leveraging geometric symmetry in robotic policy learning",
+        "speaker": "Dian Wang"
+      },
+      {
+        "title": "Geometric algebra, Riemannian geometry, and quantum computing for robotics modeling, learning and control",
+        "speaker": "Eduardo Bayro-Corrochano"
+      }
+    ],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "SimR: Simulation and Robotics Tutorial",
+    "type": "tutorial",
+    "day": "Monday",
+    "url": "https://cs.pomona.edu/~ajc/tutorials/simr-icra2026/",
+    "organizers": [
+      "Anthony J. Clark (Pomona College)",
+      "Jared M. Moore (Grand Valley State University)",
+      "Neil Chulani (Apple)"
+    ],
+    "speakers": [],
+    "talks": [],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "1st Workshop on Generalization in Autonomous Driving: Paradigms, Practice, and Public Road Demonstrations",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://tum-avs.github.io/ICRA2026_Workshop/",
+    "organizers": [
+      "Johannes Betz (TUM)",
+      "Ilir Tahiraj (TUM)",
+      "Markus Lienkamp (TUM)",
+      "Korbinian Moller (TUM)"
+    ],
+    "speakers": [
+      "Marco Pavone (Stanford & NVIDIA)",
+      "Cristina Olaverri-Monreal (JKU Linz)",
+      "Felix Fent (TUM)",
+      "Hongyang Li (University of Hong Kong)",
+      "Kashyap Chitta (KE:SAI)"
+    ],
+    "talks": [
+      {
+        "title": "Generalized Autonomous Driving at Scale",
+        "speaker": "Hongyang Li"
+      },
+      {
+        "title": "From Benchmarks to Real-World Autonomous Driving",
+        "speaker": "Cristina Olaverri-Monreal"
+      },
+      {
+        "title": "Democratizing Autonomous Driving",
+        "speaker": "Kashyap Chitta"
+      },
+      {
+        "title": "Embodied Reasoning for Out-of-Distribution Reliability in Autonomy",
+        "speaker": "Marco Pavone"
+      },
+      {
+        "title": "Open-Source: A Catalyst for Solving the Generalization Problem?",
+        "speaker": "Felix Fent"
+      }
+    ],
+    "accepted_papers_link": "https://tum-avs.github.io/ICRA2026_Workshop/",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2509.18053v4",
+      "https://arxiv.org/abs/2604.15291v1",
+      "https://arxiv.org/abs/2604.14013v1",
+      "https://arxiv.org/abs/2604.13571v2",
+      "https://arxiv.org/abs/2606.09236v1"
+    ]
+  },
+  {
+    "name": "1st Workshop on Long-term Deployments in the Wild (LoWi): Perception, Learning, and Navigation",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://mobile-robotics-hub.github.io/workshop2026/",
+    "organizers": [
+      "Zhi Yan (ENSTA - IP Paris)",
+      "Francois Goulette (ENSTA - IP Paris)",
+      "Alexandre Chapoutot (ENSTA - IP Paris)",
+      "David Filliat (AMIAD)",
+      "Andreas Nuchter (University of Wurzburg)",
+      "Tao Yang (Northwestern Polytechnical University)",
+      "Martyna Poreba (Universite Paris-Saclay, CEA, List)",
+      "Fatemeh Rekabi Bana (Durham University)",
+      "Jindriska Deckerova (CTU Prague)",
+      "Tomas Krajnik (CTU Prague)"
+    ],
+    "speakers": [
+      "Timothy Barfoot (University of Toronto)",
+      "Xieyuanli Chen (NUDT)",
+      "Ayoung Kim (Seoul National University)",
+      "Marija Popovic (TU Delft)",
+      "Teresa Vidal Calleja (UTS)",
+      "Kazunori Ohno (Tohoku University)"
+    ],
+    "talks": [
+      {
+        "title": "Everywhere and Everywhen: Progress on Long-Term Localization with Radar",
+        "speaker": "Timothy Barfoot"
+      },
+      {
+        "title": "Learning Robust and Generalizable Features for Long-term Localization",
+        "speaker": "Xieyuanli Chen"
+      },
+      {
+        "title": "Long-Term LiDAR Localization in the Wild: From Foundation Models to Ultra-Lightweight Features",
+        "speaker": "Ayoung Kim"
+      },
+      {
+        "title": "Learning Robust Robot Perception in Unknown Environments",
+        "speaker": "Marija Popovic"
+      },
+      {
+        "title": "Multi-robot Mapping in Maritime Environments",
+        "speaker": "Teresa Vidal Calleja"
+      },
+      {
+        "title": "Tough Physical AI for Task Automation in Harsh Environments",
+        "speaker": "Kazunori Ohno"
+      }
+    ],
+    "accepted_papers_link": "https://mobile-robotics-hub.github.io/workshop2026/",
+    "paper_pdf_urls": [
+      "https://mobile-robotics-hub.github.io/workshop2026/papers/LoWi2026_P01.pdf",
+      "https://mobile-robotics-hub.github.io/workshop2026/papers/LoWi2026_P02.pdf",
+      "https://mobile-robotics-hub.github.io/workshop2026/papers/LoWi2026_P03.pdf",
+      "https://mobile-robotics-hub.github.io/workshop2026/papers/LoWi2026_P04.pdf",
+      "https://mobile-robotics-hub.github.io/workshop2026/papers/LoWi2026_P05.pdf",
+      "https://mobile-robotics-hub.github.io/workshop2026/papers/LoWi2026_P06.pdf",
+      "https://mobile-robotics-hub.github.io/workshop2026/papers/LoWi2026_P07.pdf",
+      "https://mobile-robotics-hub.github.io/workshop2026/papers/LoWi2026_P08.pdf",
+      "https://mobile-robotics-hub.github.io/workshop2026/papers/LoWi2026_P09.pdf",
+      "https://mobile-robotics-hub.github.io/workshop2026/papers/LoWi2026_P10.pdf",
+      "https://mobile-robotics-hub.github.io/workshop2026/papers/LoWi2026_P11.pdf",
+      "https://mobile-robotics-hub.github.io/workshop2026/papers/LoWi2026_P12.pdf",
+      "https://mobile-robotics-hub.github.io/workshop2026/papers/LoWi2026_P13.pdf",
+      "https://mobile-robotics-hub.github.io/workshop2026/papers/LoWi2026_P14.pdf",
+      "https://mobile-robotics-hub.github.io/workshop2026/papers/LoWi2026_P15.pdf",
+      "https://mobile-robotics-hub.github.io/workshop2026/papers/LoWi2026_P16.pdf",
+      "https://mobile-robotics-hub.github.io/workshop2026/papers/LoWi2026_P17.pdf",
+      "https://mobile-robotics-hub.github.io/workshop2026/papers/LoWi2026_P18.pdf",
+      "https://mobile-robotics-hub.github.io/workshop2026/papers/LoWi2026_P19.pdf",
+      "https://mobile-robotics-hub.github.io/workshop2026/papers/LoWi2026_P20.pdf",
+      "https://mobile-robotics-hub.github.io/workshop2026/papers/LoWi2026_P21.pdf",
+      "https://mobile-robotics-hub.github.io/workshop2026/papers/LoWi2026_P22.pdf",
+      "https://mobile-robotics-hub.github.io/workshop2026/papers/LoWi2026_P23.pdf"
+    ]
+  },
+  {
+    "name": "2nd ICRA Workshop on Robot Ethics - Ethical, Legal and User Perspectives in Robotics and Automation (WOROBET)",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://sites.google.com/view/icra2026-workshop-robot-ethics",
+    "organizers": [],
+    "speakers": [
+      "Yasuhisa Hirata (Tohoku University)",
+      "Toshie Takahashi (Waseda University)",
+      "Alan Winfield (University of the West of England, Bristol)"
+    ],
+    "talks": [
+      {
+        "title": "Encouraging Human Challenge through Robotic Illusions: Motivation, Self-Efficacy, and White Lies",
+        "speaker": "Yasuhisa Hirata"
+      },
+      {
+        "title": "Human-First Innovation for Physical AI: Principles for Human-Robot Interaction in the Age of AI",
+        "speaker": "Toshie Takahashi"
+      },
+      {
+        "title": "What Could Possibly Go Wrong? A Case Study in Responsible Robotics",
+        "speaker": "Alan Winfield"
+      }
+    ],
+    "accepted_papers_link": "https://sites.google.com/view/icra2026-workshop-robot-ethics",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2603.15885v1",
+      "https://arxiv.org/abs/2605.16300v1",
+      "https://arxiv.org/abs/2605.18423v1"
+    ]
+  },
+  {
+    "name": "4th Robot-Assisted Medical Imaging (ICRA-RAMI)",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://sites.google.com/view/rami-icra-2026-workshop/home",
+    "organizers": [
+      "Yuan Bi (TUM)",
+      "Zhongliang Jiang (University of Hong Kong)",
+      "Yueming Jin (NUS)",
+      "Sophia Bano (UCL)",
+      "Stamatia Giannarou (Imperial College London)",
+      "Nassir Navab (TUM)",
+      "Xuesong Li (TUM)"
+    ],
+    "speakers": [],
+    "talks": [],
+    "accepted_papers_link": "https://sites.google.com/view/rami-icra-2026-workshop/home",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2509.13177v2",
+      "https://arxiv.org/abs/2602.15309v1",
+      "https://arxiv.org/abs/2603.10220v1"
+    ]
+  },
+  {
+    "name": "8th International Workshop on Robotics Software Engineering (RoSE'26)",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://rose-workshops.github.io/rose2026/",
+    "organizers": [
+      "Michel Albonico (UTFPR / University of Southern Denmark)",
+      "Hannan Ejaz Keen (XITASO GmbH)",
+      "Ricardo D. Caldas (Gran Sasso Science Institute)"
+    ],
+    "speakers": [
+      "Angela Schoellig (TUM)",
+      "Ana Cavalcanti (University of York)",
+      "Ivano Malavolta (Vrije Universiteit Amsterdam)",
+      "Michela Cavuoto (PAL Robotics)",
+      "Francisco Martin Rico (Rey Juan Carlos University)"
+    ],
+    "talks": [
+      {
+        "title": "Open-source software for learning-based robot control",
+        "speaker": "Angela Schoellig"
+      },
+      {
+        "title": "Engineering of Norm-aware Self-Adaptive Robots using RoboStar",
+        "speaker": "Ana Cavalcanti"
+      },
+      {
+        "title": "Do LLMs understand ROS computation graphs?",
+        "speaker": "Ivano Malavolta"
+      },
+      {
+        "title": "The CO-HAND Project: An Autonomous Industrial PoC with TIAGo Pro",
+        "speaker": "Michela Cavuoto"
+      },
+      {
+        "title": "Designing Navigation Frameworks on ROS 2",
+        "speaker": "Francisco Martin Rico"
+      }
+    ],
+    "accepted_papers_link": "https://rose-workshops.github.io/rose2026/",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2602.09661v1"
+    ]
+  },
+  {
+    "name": "Accelerating Discovery in Natural Science Laboratories with AI and Robotics",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://sites.google.com/view/robotic-accelerated-discovery/",
+    "organizers": [
+      "K. Darvish",
+      "Moritz Eckhoff",
+      "Gabriella Pizzuto",
+      "Yoshikawa Naruki"
+    ],
+    "speakers": [],
+    "talks": [],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Act to Sense to Act Better: 1st Workshop on Learning and Representations for Active Perception in Manipulation",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://active-perception-workshop.github.io/",
+    "organizers": [
+      "Cristiana de Farias (TU Darmstadt)",
+      "Tim Schneider (TU Darmstadt)",
+      "Matias Mattamala (University of Edinburgh)",
+      "Russell Buchanan (University of Waterloo)",
+      "Roberto Calandra (TU Dresden)",
+      "Subramanian Ramamoorthy (University of Edinburgh, Advisory Board)",
+      "Jan Peters (TU Darmstadt, Advisory Board)"
+    ],
+    "speakers": [
+      "Jeannette Bohg (Stanford University)",
+      "Oliver Brock (TU Berlin)",
+      "Katja Dorschner-Boyaci (Justus-Liebig-Universitat Giessen)",
+      "Nathan Lepora (University of Bristol)",
+      "Tirthankar Bandyopadhyay (CSIRO Data61)",
+      "Mohsen Kaboli (TU Eindhoven & BMW Group)",
+      "Marina Aoyama (University of Edinburgh)",
+      "Jun Yang (Epson Canada)",
+      "Adrian Rofer (University of Freiburg)",
+      "Irmak Guzey (New York University)"
+    ],
+    "talks": [
+      {
+        "title": "Active Visuo-Tactile Intelligence for Robotics",
+        "speaker": "Mohsen Kaboli"
+      },
+      {
+        "title": "A Programming Language for Interactive Perception and Robust Behavior in the Real World",
+        "speaker": "Oliver Brock"
+      },
+      {
+        "title": "Exploring & perceiving material properties",
+        "speaker": "Katja Dorschner-Boyaci"
+      },
+      {
+        "title": "From active touch to robot dexterity",
+        "speaker": "Nathan Lepora"
+      },
+      {
+        "title": "Application-Driven Active Perception",
+        "speaker": "Tirthankar Bandyopadhyay"
+      },
+      {
+        "title": "Learning to Look, Probing to Understand: Active Perception via Intervention",
+        "speaker": "Jeannette Bohg"
+      }
+    ],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Aerial inspection for marine infrastructures",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://icra2026.aerialmaritimeinspection.com/",
+    "organizers": [
+      "Evangelos Boukas (DTU)",
+      "Antonio Franchi (UT)",
+      "Konstantinos Alexis (NTNU)",
+      "Davide Scaramuzza (UZH)",
+      "Stefan Leutenegger (ETH)",
+      "Barbara Bazzana (UT)",
+      "Luca Zanatta (NTNU)",
+      "Rudolf Reiter (UZH)",
+      "Melanie Brunhofer (DTU)",
+      "Nikolaos Tziaros (DTU)"
+    ],
+    "speakers": [
+      "Sebastian Scherer (CMU)",
+      "Alberto Ortiz (University of the Balearic Islands)",
+      "Pauline Pounds (University of Queensland)",
+      "Paolo Brianzoni (Helvetis)",
+      "Oystein Skotheim (ScoutDI)",
+      "Paul Samuel (Flyability)"
+    ],
+    "talks": [
+      {
+        "title": "Versatile Aerial Manipulation with Assisted Teleoperation",
+        "speaker": "Sebastian Scherer"
+      },
+      {
+        "title": "Development of a visual inspection-oriented framework for infrastructures inspection: a retrospective overview and beyond",
+        "speaker": "Alberto Ortiz"
+      },
+      {
+        "title": "Integrated Rotor Force Sensing for Dynamic Gust and Aerodynamic Disturbance Rejection",
+        "speaker": "Pauline Pounds"
+      },
+      {
+        "title": "Autonomous UAVs in Offshore Wind: From Lab to Sea",
+        "speaker": "Paolo Brianzoni"
+      },
+      {
+        "title": "Fully automated cargo oil tank inspection with no human entry using the Scout 137",
+        "speaker": "Oystein Skotheim"
+      },
+      {
+        "title": "Keeping humans out of dangerous spaces: the future of drones as a class-certified solution for maritime UT inspections",
+        "speaker": "Paul Samuel"
+      }
+    ],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "AI-Driven Soft Robotics: Innovations, Challenges, and Future Directions",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://sites.google.com/view/ai-soro-icra2026",
+    "organizers": [
+      "Ke Wu (MBZUAI)",
+      "Zixi Chen (Scuola Superiore Sant'Anna)",
+      "Jessica Burgner-Kahrs (University of Toronto)",
+      "Cesare Stefanini (MBZUAI)",
+      "Cecilia Laschi (NUS)",
+      "Abdalla Swikir (MBZUAI)"
+    ],
+    "speakers": [
+      "Thomas George Thuruthel (UCL)",
+      "Egidio Falotico (Scuola Superiore Sant'Anna)",
+      "Cosimo Della Santina (TU Delft)",
+      "Charlie C. L. Wang (University of Manchester)",
+      "Jessica Burgner-Kahrs (University of Toronto)",
+      "Perla Maiolino (University of Oxford)",
+      "Gang Zheng (INRIA)",
+      "Ke Wu (MBZUAI)",
+      "Zhanchi Wang (USTC)",
+      "Federico Renda (Khalifa University)",
+      "Fumiya Iida (University of Cambridge)",
+      "Daniela Rus (MIT)",
+      "Robert Katzschmann (ETH)",
+      "Christian Duriez (Compliance Robotics)"
+    ],
+    "talks": [],
+    "accepted_papers_link": "https://sites.google.com/view/ai-soro-icra2026",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2602.06207v1"
+    ]
+  },
+  {
+    "name": "A user-centered perspective on human-robot sensorimotor augmentation",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://sites.google.com/unisi.it/human-augmentation/home-page",
+    "organizers": [
+      "Elena Bastianelli (University of Siena)",
+      "Gionata Salvietti (University of Siena & IIT Genova)",
+      "Simone Rossi (University of Siena)",
+      "Masahiko Inami (University of Tokyo)",
+      "Domenico Prattichizzo (University of Siena & IIT Genova)"
+    ],
+    "speakers": [
+      "Domenico Prattichizzo (University of Siena & IIT Genova)",
+      "Antonio Oliviero (SESCAM, Hospital Nacional de Paraplejicos)",
+      "Andrea D'Avella (Fondazione Santa Lucia)",
+      "Itay Nisky",
+      "Julia Starke (University of Lubeck)",
+      "Etienne Burdet (Imperial College London)",
+      "Masahiko Inami (University of Tokyo)",
+      "H. Harry Asada (MIT)",
+      "Maria Pozzi (University of Siena & IIT Genova)"
+    ],
+    "talks": [
+      {
+        "title": "Sensorimotor augmentation through wearable interfaces",
+        "speaker": "Domenico Prattichizzo"
+      },
+      {
+        "title": "Robotic augmentation for spinal cord injured individuals",
+        "speaker": "Antonio Oliviero"
+      },
+      {
+        "title": "Muscular null space control for robotic augmentation",
+        "speaker": "Andrea D'Avella"
+      },
+      {
+        "title": "From Sensors to Skin: Tactile Feedback to Augment Balance Control",
+        "speaker": "Itay Nisky"
+      },
+      {
+        "title": "User Agency and Load Sharing in Semi-Autonomous Control of Robotic Hands",
+        "speaker": "Julia Starke"
+      },
+      {
+        "title": "A predictive coding framework for safe and versatile control of supernumerary robotic limbs",
+        "speaker": "Etienne Burdet"
+      },
+      {
+        "title": "Toward an Era of Exchanging Capabilities",
+        "speaker": "Masahiko Inami"
+      },
+      {
+        "title": "Superlimbs for space applications",
+        "speaker": "H. Harry Asada"
+      }
+    ],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Catching Them Young: Engaging Students in Robotics Standardization",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://sites.google.com/view/icra26-robotics-standards/home",
+    "organizers": [
+      "Oluwatosin Kolade (IEEE RAS Standards Committee)"
+    ],
+    "speakers": [],
+    "talks": [],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Circular Robotics: Designing Sustainable Autonomy for a Finite World",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://www.profactor.at/en/events-en/circular-robotics-designing-sustainable-autonomy-for-a-finite-world-icra-2026-workshop/",
+    "organizers": [
+      "Patrick Courtney (King's College London)",
+      "Fausto Ferreira (University of Zagreb / MARBLE)",
+      "Sharath Chandra Akkaladevi (PROFACTOR)",
+      "Franziska Kirstein (Three Robotics)",
+      "Adrien Escande (Inria)",
+      "Ludovic Righetti (NYU)",
+      "Carl Maria Morch (FARI/ULB)",
+      "Luisa Damiano (IULM)",
+      "Shirley A. Elprama (imec-SMIT/VUB)",
+      "Ilaria Alfieri (IULM)"
+    ],
+    "speakers": [],
+    "talks": [],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Connected Autonomous Robotic Systems",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://connected-robots.com",
+    "organizers": [
+      "Mata Khalili (Nokia Bell Labs)",
+      "Aliasghar Arab (City College of New York and NYU)",
+      "Shutong Jin (KTH)",
+      "Marcus Gualtieri (Bosch)"
+    ],
+    "speakers": [
+      "Ken Goldberg (UC Berkeley)",
+      "Prachi Sachdeva (TNO)",
+      "Florian Pokorny (KTH)",
+      "Yoshinori Kitatsuji (KDDI Research)"
+    ],
+    "talks": [
+      {
+        "title": "Digital Twins and Cloud-Based Automation",
+        "speaker": "Ken Goldberg"
+      },
+      {
+        "title": "6G Networks and Cybersecurity for Connected Autonomous Systems",
+        "speaker": "Prachi Sachdeva"
+      },
+      {
+        "title": "Orientation Matters: Learning Radiation Patterns in Multi-Rotor UAVs",
+        "speaker": "Martin Zoula et al."
+      },
+      {
+        "title": "VISTA: A Benchmark for Real-Time Video Streaming under Network Impairments in Surgical Teleoperation",
+        "speaker": "Zexin Deng et al."
+      },
+      {
+        "title": "Applying Balanced Incomplete Block Diagrams to Ensure Reliable Deterministic Scheduling in Fully Connected Swarms",
+        "speaker": "Anika Mahesh"
+      },
+      {
+        "title": "Towards Bootstrapping Dexterous Manipulation with Cloud Robotics",
+        "speaker": "Florian Pokorny"
+      },
+      {
+        "title": "Communication Technologies for Robotics",
+        "speaker": "Yoshinori Kitatsuji"
+      }
+    ],
+    "accepted_papers_link": "https://connected-robots.com/call-for-papers.html",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2605.08886v1"
+    ]
+  },
+  {
+    "name": "Dexterity with Multifingered Hands: Hardware, Sensing, and Skills",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://dex-manipulation.github.io/icra2026/",
+    "organizers": [
+      "Haozhi Qi (Amazon FAR & University of Chicago)",
+      "Kenneth Shaw (CMU)",
+      "Shuang Li (Agile Robots SE)",
+      "Cheng Pan (EPFL)",
+      "Lei Zhang (University of Hamburg & Agile Robots SE)",
+      "Sungjae Park (CMU)",
+      "Kevin Lynch (Northwestern University)"
+    ],
+    "speakers": [
+      "Pulkit Agrawal (MIT)",
+      "Rika Antonova (University of Cambridge)",
+      "Jeannette Bohg (Stanford)",
+      "Georgia Chalvatzaki (TU Darmstadt)",
+      "Matei Ciocarlie (Columbia University)",
+      "Robert Katzschmann (ETH Zurich)",
+      "Nathan Lepora (University of Bristol)",
+      "Jie Song (HKUST GZ)",
+      "Maria Bauza Villalonga (Google DeepMind)"
+    ],
+    "talks": [],
+    "accepted_papers_link": "https://openreview.net/group?id=IEEE.org/ICRA/2026/Workshop/Dex",
+    "paper_pdf_urls": [
+      "https://openreview.net/forum?id=UVlCq2K1DW",
+      "https://openreview.net/forum?id=edxpk1fpsn",
+      "https://openreview.net/forum?id=MDaHdJjWTj",
+      "https://openreview.net/forum?id=hsQpPZxeZO",
+      "https://openreview.net/forum?id=qxWRbljHKm",
+      "https://openreview.net/forum?id=eSXuRKUBuH",
+      "https://openreview.net/forum?id=0C6tzx3C1Y",
+      "https://openreview.net/forum?id=HTbdYhkUwX",
+      "https://openreview.net/forum?id=M9HEKTGi32",
+      "https://openreview.net/forum?id=SQcMFrxg4L",
+      "https://openreview.net/forum?id=LMvvxZ9olT",
+      "https://openreview.net/forum?id=c52f7uN13s",
+      "https://openreview.net/forum?id=i5IbILq9Yb",
+      "https://openreview.net/forum?id=BnbimjIdNb",
+      "https://openreview.net/forum?id=s3KyZlGjAU",
+      "https://openreview.net/forum?id=POuDNj8jbA",
+      "https://openreview.net/forum?id=NovfyPyLsq"
+    ]
+  },
+  {
+    "name": "Embodied AI and the Future of Telepresence through Robotics",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://sites.google.com/view/embodied-ai-icra-26/",
+    "organizers": [],
+    "speakers": [
+      "Tiago Henrique Falk (INRS, University of Quebec)",
+      "Eloise Matheson (CERN)",
+      "Strahinja Dosen (Aalborg University)"
+    ],
+    "talks": [
+      {
+        "title": "Multisensory Immersion and Biosensing in XR",
+        "speaker": "Tiago Henrique Falk"
+      },
+      {
+        "title": "Telerobotics for CERN: 10 Years of Operations in Hazardous Zones",
+        "speaker": "Eloise Matheson"
+      },
+      {
+        "title": "NeuraLoop: A High-Bandwidth Bidirectional Wearable Interface",
+        "speaker": "Strahinja Dosen"
+      }
+    ],
+    "accepted_papers_link": "https://sites.google.com/view/embodied-ai-icra-26/proceedings",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2511.09558v1",
+      "https://arxiv.org/abs/2505.06584v2"
+    ]
+  },
+  {
+    "name": "From Sea to Space: Advancing Perception in Harsh Domains",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://sites.google.com/view/icra-2026-s2s-perception/",
+    "organizers": [
+      "Katie Skinner (University of Michigan)",
+      "Giancarlo Troni (MBARI)",
+      "Tat-Jun Chin (University of Adelaide)",
+      "Ayoung Kim (Seoul National University)",
+      "Marija Popovic (TU Delft)",
+      "Pushyami Kaveti (MBARI)",
+      "Travis Driver (Georgia Tech)",
+      "Levi Cai (MIT-WHOI Joint Program)",
+      "Anja Sheppard (University of Michigan)",
+      "Onur Bagoren (University of Michigan)",
+      "Jingyu Song (University of Michigan)",
+      "Amy Phung (MIT-WHOI Joint Program)",
+      "Kalin Norman (BYU)"
+    ],
+    "speakers": [
+      "Hiro Ono (NASA)",
+      "Annette Stahl (NTNU)",
+      "Tobias Fischer (QUT)",
+      "Tat-Jun Chin (University of Adelaide)",
+      "Emma Zemler (NASA)",
+      "Joshua Mangelson (Brigham Young University)",
+      "Teresa Vidal Calleja (UTS)"
+    ],
+    "talks": [
+      {
+        "title": "Fast, Efficient, and Robust: Perception and Localisation for GPS-Denied Robotics",
+        "speaker": "Tobias Fischer"
+      },
+      {
+        "title": "Towards Robust Multi-Agent Underwater Localization and Coastal Semantic Mapping",
+        "speaker": "Josh Mangelson"
+      },
+      {
+        "title": "Spatial Perception in Marine, Orbital, and Planetary Domains",
+        "speaker": "Teresa Vidal-Calleja"
+      },
+      {
+        "title": "Neuromorphic Perception and Computing for Space Applications",
+        "speaker": "Tat-Jun Chin"
+      },
+      {
+        "title": "Resilient Perception for Field Robotics in Harsh Maritime Environments",
+        "speaker": "Annette Stahl"
+      },
+      {
+        "title": "Toward Interplanetary Foundation Models: Can AI Drive a Mars Rover?",
+        "speaker": "Hiro Ono"
+      },
+      {
+        "title": "NASA Ignition and iMETRO",
+        "speaker": "Emma Zemler"
+      },
+      {
+        "title": "Underwater 3D Reconstruction by Interleaving Multimodal SLAM and Incremental Gaussian Splatting",
+        "speaker": "Daniel Yang"
+      },
+      {
+        "title": "Rapid and Physically-Based Gaussian Splatting of Unknown Space Objects in Low Earth Orbit",
+        "speaker": "Tae Ha Park"
+      },
+      {
+        "title": "NeuSLAM: Dense Visual SLAM on Edge Devices",
+        "speaker": "Aniket Gupta"
+      },
+      {
+        "title": "FootRecon: Quadrupedal Terrain Reconstruction from Sparse Foot Contacts with Geometric Prior",
+        "speaker": "Yujin Park"
+      }
+    ],
+    "accepted_papers_link": "https://drive.google.com/drive/folders/1t8puuHxOzIu07MIvhL3bJ-9PPSXWtQd8?usp=sharing",
+    "paper_pdf_urls": [
+      "https://drive.google.com/uc?export=download&id=1xbqPCcjmeI5FKO72CG5OXhDK3rKnLUEL",
+      "https://drive.google.com/uc?export=download&id=1lMjMiea3L31d22o3wLtPnJZQxeiqjnZE",
+      "https://drive.google.com/uc?export=download&id=1l2fpVt4k5ogOSf8ysZ7oJeIveMezXn60",
+      "https://drive.google.com/uc?export=download&id=1jvlNN1tJwUfX-hZch9heZNM4Eq7FpCqI",
+      "https://drive.google.com/uc?export=download&id=1k3KHd93Yv9DeXbkpkXpr-IDamwYRLVVz",
+      "https://drive.google.com/uc?export=download&id=1mzHi4a1C-RwYM-HH35ySJ38SjrGT3hHX",
+      "https://drive.google.com/uc?export=download&id=1Ad1qBnOtep2V0Bwj11RQG2klIEgtTszH",
+      "https://drive.google.com/uc?export=download&id=18IAHy8R-p3nbilu43StkyVYy44-NpDLf",
+      "https://drive.google.com/uc?export=download&id=1Cx1mj2_wuiaMj1mMVJZsLObIQPeYxMNE",
+      "https://drive.google.com/uc?export=download&id=1JDJuuJn3wUOMxSns00jTMkqAU33AjHXe",
+      "https://drive.google.com/uc?export=download&id=19_c0YgeebFpW_2kvX_TQAbqFiPs_52sm",
+      "https://drive.google.com/uc?export=download&id=1f0zqcahiWcs0sLJDIDp4zQegMH1ujfTw",
+      "https://drive.google.com/uc?export=download&id=1BCrYdtPunIEGWgGEzNHxXZlqlNJjA5lT",
+      "https://drive.google.com/uc?export=download&id=1dVhLktG-vKf4ArggcLp5_H6uLgjQ6r35",
+      "https://drive.google.com/uc?export=download&id=1rfBOY_r6H7jZ7ACAbsKPiieZ_XhqBLbx",
+      "https://drive.google.com/uc?export=download&id=12_7tgeQOKaODmKIryiMLaTwrcpgiwViL",
+      "https://drive.google.com/uc?export=download&id=1BcDJyAwCTlZarwl4Snogmoabqmezjy9S",
+      "https://drive.google.com/uc?export=download&id=1b_sVLvY0sXsgbzcZuIAZnHcskvFmuLDU",
+      "https://drive.google.com/uc?export=download&id=10Y9hexfQkSoQWh3QE4gJbAYl0pQcffkH",
+      "https://drive.google.com/uc?export=download&id=1VVHNWw67_DrP-JoXMcZ6wfD5oWvD6XU1",
+      "https://drive.google.com/uc?export=download&id=1Spc7450E2oirncTKIIK5bFQ3TZdIAiUf",
+      "https://drive.google.com/uc?export=download&id=1eMBckRE0CYlZnSiXJvKYZLlRqWfTUfPH",
+      "https://drive.google.com/uc?export=download&id=104Zn7b8n017wF9YN4LdzHjvYbZLCF7wr",
+      "https://drive.google.com/uc?export=download&id=1xdlj0S60jqo1vkD4n9m7ic9Rl2NA6dGD",
+      "https://drive.google.com/uc?export=download&id=1Qy_xvYQvYdIFrcV-bbrGGqyVBxdcbh6X",
+      "https://drive.google.com/uc?export=download&id=1ii1DU7lfgyxN3fzubZ8H44566Dqb32eo"
+    ]
+  },
+  {
+    "name": "1st Workshop on Generative Digital Twins for Real2Sim and Sim2Real Transfer in Robotics",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://awesomedigitaltwin.github.io/2026_ICRA.html",
+    "organizers": [
+      "Andrew Melnik (University of Bremen)",
+      "Alberta Longhini (Stanford University)",
+      "Jonathan Francis (Bosch Center for AI + CMU)",
+      "Uksang Yoo (CMU)",
+      "Zhixuan Liu (CMU)",
+      "Maggie Wang (Stanford University)",
+      "Mehreen Naeem (Bremen University)"
+    ],
+    "speakers": [
+      "Hengshuang Zhao (University of Hong Kong)",
+      "Steve Xie (Lightwheel)",
+      "Jiajun Wu (Stanford)",
+      "Ajay Mandlekar (NVIDIA)",
+      "Manolis Savva (SFU)",
+      "Ingmar Posner (Oxford)",
+      "Ken Goldberg (UC Berkeley)",
+      "Oier Mees (Microsoft)"
+    ],
+    "talks": [
+      {
+        "title": "Empowering Embodied Robots with Physical Intelligence",
+        "speaker": "Hengshuang Zhao"
+      },
+      {
+        "title": "Building the Continuous Learning System for Physical AI",
+        "speaker": "Steve Xie"
+      },
+      {
+        "title": "Physical Grounding of Generative Digital Twins for Robotics",
+        "speaker": "Jiajun Wu"
+      },
+      {
+        "title": "Removing the Barriers to Simulation Adoption with Automated Environment Construction and Synthetic Data Generation",
+        "speaker": "Ajay Mandlekar"
+      },
+      {
+        "title": "Digital Twins for Embodied AI: Scaling Acquisition & Generation",
+        "speaker": "Manolis Savva"
+      },
+      {
+        "title": "Back to the Future: A Case for Structured Representation Learning in World Models",
+        "speaker": "Ingmar Posner"
+      },
+      {
+        "title": "Real2Render2Real: Scaling Robot Data Without Dynamics Simulation or Robot Hardware",
+        "speaker": "Ken Goldberg"
+      },
+      {
+        "title": "Towards Self-Improving and Steerable Robot Policies",
+        "speaker": "Oier Mees"
+      }
+    ],
+    "accepted_papers_link": "https://awesomedigitaltwin.github.io/2026_ICRA.html",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2604.03552v1",
+      "https://arxiv.org/abs/2604.09487v2",
+      "https://arxiv.org/abs/2602.19359v1",
+      "https://arxiv.org/abs/2603.20827v1",
+      "https://arxiv.org/abs/2602.20150v3",
+      "https://arxiv.org/abs/2510.11340v4",
+      "https://arxiv.org/abs/2508.21065v2",
+      "https://arxiv.org/abs/2510.20813v1",
+      "https://arxiv.org/abs/2604.15805v1",
+      "https://arxiv.org/abs/2508.19204v1",
+      "https://arxiv.org/abs/2510.04354v1",
+      "https://arxiv.org/abs/2512.05955v2"
+    ]
+  },
+  {
+    "name": "Investing in Robotics: How to Judge, What Breaks, What's Hot",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://www.ellipsis-venture.com/icra2026/",
+    "organizers": [
+      "Robert MacKenzie (Ellipsis Venture)"
+    ],
+    "speakers": [
+      "Robert MacKenzie (Ellipsis Venture)",
+      "Kateryna Portmann (Women in Robotics & ANYbotics)",
+      "Prof. Li (ATEC Robotics Competition)",
+      "Benoit Berkoukchi (Bleu Robotics)",
+      "Henry Hickson (Collective Robotics)",
+      "Francisco Cuellar Cordova (TUMI Robotics)"
+    ],
+    "talks": [
+      {
+        "title": "How investors evaluate robotics, hot now vs. 2028",
+        "speaker": "Robert MacKenzie"
+      },
+      {
+        "title": "Challenges of building an autonomous robot",
+        "speaker": "Kateryna Portmann"
+      }
+    ],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "International Joint Workshop on Ontologies, Semantic Maps and Autonomous Robotics Standardization (J-WOSMARS 2026)",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://wosra.github.io/j-wosmars/",
+    "organizers": [],
+    "speakers": [],
+    "talks": [],
+    "accepted_papers_link": "https://wosra.github.io/j-wosmars/papers/",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2606.09134v1",
+      "https://arxiv.org/abs/2605.26828v1"
+    ]
+  },
+  {
+    "name": "MM-Spatial AI: Multi-Modal Spatial AI for Robust Navigation and Open-World Understanding",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://xingxingzuo.github.io/MM-SpatialAI/",
+    "organizers": [],
+    "speakers": [],
+    "talks": [],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Multimodal Embodied Interaction in Robots",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "http://www.mananlab.tech/workshop",
+    "organizers": [],
+    "speakers": [],
+    "talks": [],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Multi-modal robotics for sustainable environmental sensing",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://sites.google.com/view/sustainability-robotics/home",
+    "organizers": [
+      "Luca Romanello (EPFL/Empa)",
+      "Andre Farinha (CSIRO)",
+      "Li Wen (Beihang University)",
+      "Sophie Armanini (Imperial College London)",
+      "Pham Huy Nguyen (EMPA/EPFL)",
+      "Mirko Kovac (EMPA, EPFL, Imperial College London)",
+      "Yufeng Chen (MIT)"
+    ],
+    "speakers": [
+      "Josie Hughes",
+      "Paulo Drews",
+      "Laura Margheri",
+      "Marcelo Camargo (WeRobotics)",
+      "Raphael Zufferey",
+      "Cecilia Laschi",
+      "Eric Chen (MIT/WHOI)"
+    ],
+    "talks": [],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Notes and Bots: A Workshop on Robotic Musicianship",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://icra2026rm.github.io/",
+    "organizers": [],
+    "speakers": [],
+    "talks": [],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Workshop on Open Challenges for Rigorous Robot Perception",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://icra2026-rigorous-perception.github.io/",
+    "organizers": [
+      "Jens Behley (University of Bonn)",
+      "Maximilian Durner (DLR)",
+      "Raphael Hagmanns (Fraunhofer IOSB)",
+      "Ayoung Kim (Seoul National University)",
+      "Dimity Miller (QUT Centre for Robotics)",
+      "Joerg Stueckler (University of Augsburg)",
+      "Rudolph Triebel (DLR, KIT)",
+      "Wenzhen Yuan (University of Illinois)"
+    ],
+    "speakers": [
+      "Margarita Chli (ETH Zurich and University of Cyprus)",
+      "Abhinav Valada (University of Freiburg)",
+      "Kostas Alexis (NTNU)",
+      "Yu Xiang (University of Texas at Dallas)",
+      "Georgia Chalvatzaki (TU Darmstadt)",
+      "Juxi Leitner (Amazon Robotics & Monash University)"
+    ],
+    "talks": [
+      {
+        "title": "Rigorous perception for single- and multi-robot systems: are we there yet?",
+        "speaker": "Margarita Chli"
+      },
+      {
+        "title": "Rigorous Robot Perception in the Open World: From Recognition to Introspection and Adaptation",
+        "speaker": "Abhinav Valada"
+      },
+      {
+        "title": "The Role of FMCW Radar in Resilient Robot Perception",
+        "speaker": "Kostas Alexis"
+      },
+      {
+        "title": "From Modular Robotics Pipelines to Vision-Language-Action Systems: Lessons from Real-World Manipulation",
+        "speaker": "Yu Xiang"
+      },
+      {
+        "title": "Structured Robot Learning for Rigorous Manipulation: From Perception to Action",
+        "speaker": "Georgia Chalvatzaki"
+      },
+      {
+        "title": "Robustness from multiple angles - academia, startup, industry",
+        "speaker": "Juxi Leitner"
+      }
+    ],
+    "accepted_papers_link": "https://openreview.net/group?id=IEEE.org/ICRA/2026/Workshop/Robot_Perception",
+    "paper_pdf_urls": [
+      "https://icra2026-rigorous-perception.github.io/pdf/dholakia2026.pdf",
+      "https://icra2026-rigorous-perception.github.io/pdf/yoo2026.pdf",
+      "https://icra2026-rigorous-perception.github.io/pdf/pfreundschuh2026.pdf",
+      "https://icra2026-rigorous-perception.github.io/pdf/kegeleirs2026.pdf",
+      "https://icra2026-rigorous-perception.github.io/pdf/border2026.pdf",
+      "https://icra2026-rigorous-perception.github.io/pdf/hall2026.pdf",
+      "https://icra2026-rigorous-perception.github.io/pdf/gaus2026.pdf",
+      "https://icra2026-rigorous-perception.github.io/pdf/liu2026.pdf",
+      "https://icra2026-rigorous-perception.github.io/pdf/singh2026.pdf",
+      "https://icra2026-rigorous-perception.github.io/pdf/shrestha2026.pdf",
+      "https://icra2026-rigorous-perception.github.io/pdf/jung2026b.pdf",
+      "https://icra2026-rigorous-perception.github.io/pdf/buoso2026.pdf",
+      "https://icra2026-rigorous-perception.github.io/pdf/anand2026.pdf",
+      "https://icra2026-rigorous-perception.github.io/pdf/schneider2026.pdf",
+      "https://icra2026-rigorous-perception.github.io/pdf/zhao2026.pdf",
+      "https://icra2026-rigorous-perception.github.io/pdf/maalla2026.pdf",
+      "https://icra2026-rigorous-perception.github.io/pdf/jung2026a.pdf",
+      "https://icra2026-rigorous-perception.github.io/pdf/inamdar2026.pdf",
+      "https://icra2026-rigorous-perception.github.io/pdf/tekden2026.pdf",
+      "https://icra2026-rigorous-perception.github.io/pdf/kurkova2026.pdf",
+      "https://icra2026-rigorous-perception.github.io/pdf/muluk2026.pdf"
+    ]
+  },
+  {
+    "name": "Radar in Robotics: New Frontiers",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://sites.google.com/view/radar-robotics/",
+    "organizers": [
+      "Daniil Lisus",
+      "Chiyun Noh",
+      "Keenan Burnett",
+      "Martin Magnusson",
+      "Stephan Weiss",
+      "Vladimir Kubelka",
+      "Vsevolod Hulchuk"
+    ],
+    "speakers": [
+      "Liang Hu",
+      "Masrur Doostdar",
+      "Pou-Chun Kung",
+      "Dong-Hee Paek",
+      "Donnie Smith",
+      "Gor Hakobyan",
+      "Daniel Casado Herraez"
+    ],
+    "talks": [
+      {
+        "title": "Pushing the Limits of Radar-Centric Perception",
+        "speaker": "Daniel Casado Herraez"
+      },
+      {
+        "title": "Radar Sensing Applications in Industrial Mining Environments",
+        "speaker": "Masrur Doostdar"
+      },
+      {
+        "title": "Shifting Input Paradigms in 4D Radar AI: From Point Clouds to Raw ADC",
+        "speaker": "Dong-Hee Paek"
+      },
+      {
+        "title": "Radar Gaussian Splatting for High-Fidelity Data Synthesis and 3D Reconstruction",
+        "speaker": "Pou-Chun Kung"
+      },
+      {
+        "title": "Other Modalities Matter: Unlocking the Potential of 4D Radar via Multi-Modal Fusion",
+        "speaker": "Liang Hu"
+      },
+      {
+        "title": "Imaging radar: new type of eyes for robots",
+        "speaker": "Gor Hakobyan"
+      },
+      {
+        "title": "Radars for Autonomous Driving, Theory vs Practice",
+        "speaker": "Donnie Smith"
+      }
+    ],
+    "accepted_papers_link": "https://sites.google.com/view/radar-robotics/",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2604.01921",
+      "https://arxiv.org/abs/2604.07939",
+      "https://arxiv.org/abs/2603.25623",
+      "https://arxiv.org/abs/2604.14013",
+      "https://arxiv.org/abs/2604.12918",
+      "https://arxiv.org/abs/2604.12027",
+      "https://arxiv.org/abs/2604.13571",
+      "https://arxiv.org/abs/2604.13584",
+      "https://arxiv.org/abs/2604.11671",
+      "https://arxiv.org/abs/2605.07367",
+      "https://arxiv.org/abs/2604.14857",
+      "https://arxiv.org/abs/2604.14868",
+      "https://arxiv.org/abs/2604.19962"
+    ]
+  },
+  {
+    "name": "Shared Challenges in Human-Centered and Resilient Robotic Autonomy",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://sites.google.com/cs.miami.edu/scr-icra26",
+    "organizers": [
+      "Katarzyna Pasternak",
+      "Alexander Ferrein",
+      "Adam Jacoff",
+      "Matteo Leonetti",
+      "Kamel Saidi",
+      "Soren Schwertfeger",
+      "Raymond Sheh",
+      "Jared Swift",
+      "Ann-Marie Virts"
+    ],
+    "speakers": [
+      "Maria Kyrarini",
+      "Jiachen Li",
+      "Bill Smart",
+      "Mike Hagenow",
+      "Zlatan Ajanovic"
+    ],
+    "talks": [],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Signals in Sync: Multi-Modal Interfaces and AI-Driven Control for Next-Gen Prosthetics",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://sites.google.com/nyu.edu/sis-icra26",
+    "organizers": [
+      "Ikhlas Ben Hmida",
+      "Ningbin Zhang",
+      "Fares Abu-Dakka"
+    ],
+    "speakers": [
+      "Etienne Burdet",
+      "Patricia Capsi-Morales",
+      "Dario Farina",
+      "Giorgio Grioli",
+      "He (Helen) Huang"
+    ],
+    "talks": [],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Synthetic Data for Robot Learning",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://sites.google.com/view/icra-2026-sdrl-workshop",
+    "organizers": [
+      "Fan Shi",
+      "SiQi Zhou",
+      "Mayank Mittal",
+      "Ziqiu Zeng",
+      "Steve Xie",
+      "Vincent Bonnet",
+      "Peter Chen"
+    ],
+    "speakers": [
+      "Justin Carpentier",
+      "Ming Lin",
+      "Jiajun Wu",
+      "Angela Schoellig",
+      "Jason Peng",
+      "Sergey Zakharov",
+      "Hugo Talbot",
+      "Yunzhu Li"
+    ],
+    "talks": [
+      {
+        "title": "Accelerating Physical Simulation in Robotics",
+        "speaker": "Justin Carpentier"
+      },
+      {
+        "title": "Data Challenges in Robot Learning",
+        "speaker": "Ming Lin"
+      },
+      {
+        "title": "Understanding the Visual World Through Physical Intrinsics",
+        "speaker": "Jiajun Wu"
+      },
+      {
+        "title": "Closing the Loop: Synthetic Worlds for Scalable Robot Learning",
+        "speaker": "Sergey Zakharov"
+      },
+      {
+        "title": "Beyond Training: Synthetic Data for Reliable Robot Learning",
+        "speaker": "Angela Schoellig"
+      },
+      {
+        "title": "Synthetic Motion Data for Versatile Humanoid Control",
+        "speaker": "Jason Peng"
+      },
+      {
+        "title": "Structured World Models as Scalable Data Engines",
+        "speaker": "Yunzhu Li"
+      },
+      {
+        "title": "Interactive Mechanical Simulation for Control and Learning in Robotics",
+        "speaker": "Hugo Talbot"
+      }
+    ],
+    "accepted_papers_link": "https://sites.google.com/view/icra-2026-sdrl-workshop",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2509.18455v4",
+      "https://arxiv.org/abs/2601.16212v4",
+      "https://arxiv.org/abs/2603.16861v2",
+      "https://arxiv.org/abs/2604.17513v1",
+      "https://arxiv.org/abs/2501.14377v2",
+      "https://arxiv.org/abs/2504.16843v1",
+      "https://arxiv.org/abs/2605.27724v1"
+    ]
+  },
+  {
+    "name": "The Good Reviewer: Shaping up peer-review in the robotics community",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://alejandrofontan.github.io/The-Good-Reviewer-ICRA26/",
+    "organizers": [
+      "Alejandro Fontan",
+      "Gokul B. Nair",
+      "Irene Ballester",
+      "Lisa Weijler",
+      "Riccardo Giubilato",
+      "Marta Lorenzini",
+      "Marta Lagomarsino",
+      "Paolo Robuffo Giordano",
+      "Javier Civera",
+      "Tobias Fischer",
+      "Michael Milford"
+    ],
+    "speakers": [
+      "Aude Billard",
+      "Tamim Asfour",
+      "Antonio Bicchi",
+      "Jeannette Bohg",
+      "Ken Goldberg",
+      "Serena Ivaldi",
+      "Nadia Figueroa",
+      "Sneha Rhode Gupta"
+    ],
+    "talks": [
+      {
+        "title": "Fair Engagement",
+        "speaker": "Ken Goldberg"
+      },
+      {
+        "title": "Generative AI for Review",
+        "speaker": "Jeannette Bohg"
+      },
+      {
+        "title": "IEEE RAS reviews: How much do authors review and who reviews your papers?",
+        "speaker": "Aude Billard"
+      },
+      {
+        "title": "How to review (for doctoral students)",
+        "speaker": "Serena Ivaldi"
+      }
+    ],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "The SOFT frontier 3: Soft or Rigid? New Trends in Wearable Robotics",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://sites.google.com/view/sft-front",
+    "organizers": [],
+    "speakers": [],
+    "talks": [],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Towards Large-Area Tactile Sensing Skins: From Scalable Materials to Embodied Robotic Perception",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://large-area-tactile-sensing.github.io/",
+    "organizers": [
+      "Yunqi Huang",
+      "Yingjie Zheng",
+      "David Hardman",
+      "Changhao Xu",
+      "Perla Maiolino",
+      "Fumiya Iida",
+      "Thomas George Thuruthel"
+    ],
+    "speakers": [
+      "Zhenan Bao",
+      "Takao Someya",
+      "Giorgio Cannata",
+      "Gordon Cheng",
+      "Kyungseo Park",
+      "Yiyue Luo"
+    ],
+    "talks": [
+      {
+        "title": "Skin-Inspired Tactile Sensor Design and Fabrication",
+        "speaker": "Zhenan Bao"
+      },
+      {
+        "title": "Recent Progress of Electronic Skins for Soft Robotics and Healthcare",
+        "speaker": "Takao Someya"
+      },
+      {
+        "title": "Deployment of Large-area Electronic Skin on Humanoid Robots",
+        "speaker": "Gordon Cheng"
+      },
+      {
+        "title": "Hardware-AI Co-Design of Whole-body Robotic Skin",
+        "speaker": "Kyungseo Park"
+      },
+      {
+        "title": "Scalable Tactile Interfaces Across Humans, Robots and Tools",
+        "speaker": "Yiyue Luo"
+      }
+    ],
+    "accepted_papers_link": "https://large-area-tactile-sensing.github.io/",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2506.02824v2",
+      "https://arxiv.org/abs/2509.16353v1"
+    ]
+  },
+  {
+    "name": "ViTac - Learning to See and Feel: Vision-Tactile Synergy for Embodied AI",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://shanluo.github.io/ViTacWorkshops/vitac2026",
+    "organizers": [
+      "Zhuo Chen",
+      "Hung-Jui Huang",
+      "Ruihan Gao",
+      "Yijiong Lin",
+      "Quan Khanh Luu",
+      "Haozhi Qi",
+      "Guadarrama Olvera J. Rogelio",
+      "Abu Bakar Dawood",
+      "Shan Luo",
+      "Nathan Lepora",
+      "Wenzhen Yuan",
+      "Yu She",
+      "Kaspar Althoefer",
+      "Gordon Cheng"
+    ],
+    "speakers": [
+      "Katherine J. Kuchenbecker",
+      "Matei Ciocarlie",
+      "Yan Wu",
+      "Ireti Akinola",
+      "Maria Bauza Villalonga"
+    ],
+    "talks": [
+      {
+        "title": "Multimodal Haptic Intelligence",
+        "speaker": "Katherine J. Kuchenbecker"
+      },
+      {
+        "title": "New contact sensors for new manipulators: design, integration and applications",
+        "speaker": "Matei Ciocarlie"
+      },
+      {
+        "title": "Force-Aware Policy Learning: From Sim-to-Real to Sim-Plus-Real",
+        "speaker": "Ireti Akinola"
+      },
+      {
+        "title": "Mind the Gap: between the Mind and the World",
+        "speaker": "Yan Wu"
+      },
+      {
+        "title": "The role of tactile when doing robotic manipulation at scale",
+        "speaker": "Maria Bauza Villalonga"
+      }
+    ],
+    "accepted_papers_link": "https://shanluo.github.io/ViTacWorkshops/vitac2026",
+    "paper_pdf_urls": [
+      "https://shanluo.github.io/ViTacWorkshops/assets/accepted_paper/pdf/1.pdf",
+      "https://shanluo.github.io/ViTacWorkshops/assets/accepted_paper/pdf/2.pdf",
+      "https://shanluo.github.io/ViTacWorkshops/assets/accepted_paper/pdf/3.pdf",
+      "https://shanluo.github.io/ViTacWorkshops/assets/accepted_paper/pdf/4.pdf",
+      "https://shanluo.github.io/ViTacWorkshops/assets/accepted_paper/pdf/5.pdf",
+      "https://shanluo.github.io/ViTacWorkshops/assets/accepted_paper/pdf/6.pdf",
+      "https://shanluo.github.io/ViTacWorkshops/assets/accepted_paper/pdf/7.pdf",
+      "https://shanluo.github.io/ViTacWorkshops/assets/accepted_paper/pdf/8.pdf",
+      "https://shanluo.github.io/ViTacWorkshops/assets/accepted_paper/pdf/9.pdf",
+      "https://shanluo.github.io/ViTacWorkshops/assets/accepted_paper/pdf/10.pdf",
+      "https://shanluo.github.io/ViTacWorkshops/assets/accepted_paper/pdf/11.pdf",
+      "https://shanluo.github.io/ViTacWorkshops/assets/accepted_paper/pdf/12.pdf",
+      "https://shanluo.github.io/ViTacWorkshops/assets/accepted_paper/pdf/13.pdf",
+      "https://shanluo.github.io/ViTacWorkshops/assets/accepted_paper/pdf/14.pdf",
+      "https://shanluo.github.io/ViTacWorkshops/assets/accepted_paper/pdf/15.pdf",
+      "https://shanluo.github.io/ViTacWorkshops/assets/accepted_paper/pdf/16.pdf",
+      "https://shanluo.github.io/ViTacWorkshops/assets/accepted_paper/pdf/17.pdf",
+      "https://shanluo.github.io/ViTacWorkshops/assets/accepted_paper/pdf/18.pdf",
+      "https://shanluo.github.io/ViTacWorkshops/assets/accepted_paper/pdf/19.pdf",
+      "https://shanluo.github.io/ViTacWorkshops/assets/accepted_paper/pdf/20.pdf"
+    ]
+  },
+  {
+    "name": "Workshop on Agricultural Robotics: Dealing with the complex agricultural environment",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://agrifoodroboticsworkshop.wordpress.com/icra2026/",
+    "organizers": [
+      "Gert Kootstra",
+      "Yael Edan",
+      "Eldert van Henten",
+      "Marcel Bergerman"
+    ],
+    "speakers": [],
+    "talks": [],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Workshop on Frontiers of Optimization for Robotics, 2nd Edition",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://sites.google.com/robotics.utias.utoronto.ca/icra26-frontiers-optimization/home",
+    "organizers": [
+      "Patrick Wensing",
+      "Frederike Dumbgen",
+      "Frank Dellaert",
+      "Ajay Sathya",
+      "Connor Holmes",
+      "Armin Nurkanovic",
+      "Alberto De Marchi"
+    ],
+    "speakers": [
+      "Evangelos Theodorou",
+      "Melanie Zeilinger",
+      "Justin Carpentier",
+      "Emo Todorov",
+      "Kangyu Lin",
+      "Kaoru Yamamoto",
+      "Christian Dietz",
+      "Moritz Diehl",
+      "Heng Yang",
+      "Tobia Marcucci"
+    ],
+    "talks": [],
+    "accepted_papers_link": "https://openreview.net/group?id=IEEE.org/ICRA/2026/Workshop/FOR",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2603.01267v2",
+      "https://arxiv.org/abs/2601.12169v1"
+    ]
+  },
+  {
+    "name": "Workshop on Pedestrian Behavior Prediction",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://workshop-pbp2026.github.io/",
+    "organizers": [
+      "Chongfeng Wei",
+      "Edmond S. L. Ho",
+      "Hamid Taghavifar",
+      "Wenshuo Wang",
+      "Xingchen Zhang",
+      "Yanping Wu",
+      "Guangxun Zhu",
+      "Yuxuan Xie"
+    ],
+    "speakers": [
+      "Alexandre Alahi",
+      "Hubert P. H. Shum",
+      "Amir Rasouli",
+      "Philippe Martinet"
+    ],
+    "talks": [
+      {
+        "title": "Proactive Autonomous Navigation in Human Populated Environment",
+        "speaker": "Philippe Martinet"
+      },
+      {
+        "title": "Trustworthy Pedestrian Prediction",
+        "speaker": "Amir Rasouli"
+      },
+      {
+        "title": "Pedestrian Behavior Prediction",
+        "speaker": "Alexandre Alahi"
+      }
+    ],
+    "accepted_papers_link": "https://workshop-pbp2026.github.io/",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2606.09142v1",
+      "https://arxiv.org/abs/2604.23728v2"
+    ]
+  },
+  {
+    "name": "Workshop on Reinforcement Learning in the Era of Imitation Learning",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://rl4il-icra.github.io/",
+    "organizers": [
+      "Zhanpeng He",
+      "Stephen Tian",
+      "Xiaomeng Xu",
+      "Eric Chang",
+      "Albert Yu",
+      "Siqi Shang",
+      "Hongyu Li"
+    ],
+    "speakers": [
+      "Sergey Levine",
+      "Chelsea Finn",
+      "Pulkit Agrawal",
+      "Robert Platt",
+      "Jason Ma",
+      "Georgia Chalvatzaki",
+      "David Held",
+      "Perry Dong"
+    ],
+    "talks": [],
+    "accepted_papers_link": "https://openreview.net/group?id=IEEE.org/ICRA/2026/Workshop/RL4IL",
+    "paper_pdf_urls": [
+      "https://rl4il-icra.github.io/assets/papers/L1_robometer.pdf",
+      "https://rl4il-icra.github.io/assets/papers/L11_tunetolearn.pdf",
+      "https://rl4il-icra.github.io/assets/papers/P1_critic.pdf",
+      "https://rl4il-icra.github.io/assets/papers/P13_graph.pdf"
+    ]
+  },
+  {
+    "name": "Workshop on the Path Towards Generalizable Contact-Rich Robotics: Control and Representation",
+    "type": "workshop",
+    "day": "Monday",
+    "url": "https://cr2-icra.github.io",
+    "organizers": [
+      "Arun Bishop",
+      "Grey Sarmiento",
+      "John Zhang",
+      "Jon Arrizabalaga",
+      "Michael Posa",
+      "Preston Culbertson",
+      "Simon Le Cleac'h",
+      "Xianyi Cheng",
+      "Zachary Manchester"
+    ],
+    "speakers": [
+      "Aaron Johnson",
+      "Bibit Bianchini",
+      "Dmitry Berenson",
+      "Emo Todorov",
+      "Hae-Won Park",
+      "Justin Carpentier",
+      "Matthew Mason",
+      "Nima Fazeli",
+      "Yuval Tassa"
+    ],
+    "talks": [],
+    "accepted_papers_link": "https://openreview.net/group?id=IEEE.org/ICRA/2026/Workshop/CR2",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2604.02523v1",
+      "https://arxiv.org/abs/2605.19029v1",
+      "https://arxiv.org/abs/2605.03290v1"
+    ]
+  },
+  {
+    "name": "1st Workshop on Robot Meets GNSS and Ranging for Seamless Autonomy",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://robotmeetsranging.tech/",
+    "organizers": [
+      "Haoming Zhang",
+      "Feng (Darren) Huang",
+      "Yibin Wu",
+      "Xikun Liu",
+      "Shenghai Yuan",
+      "Daniel Medina",
+      "Taro Suzuki",
+      "Weisong Wen",
+      "Johannes Betz",
+      "SiQi Zhou",
+      "Angela Schoellig",
+      "Li-Ta Hsu"
+    ],
+    "speakers": [
+      "Taro Suzuki",
+      "Thien-Minh Nguyen",
+      "Stephan Weiss",
+      "Matthew Spenko",
+      "Daniel Medina",
+      "Weisong Wen",
+      "Abhishek Goudar",
+      "Zak Kassas"
+    ],
+    "talks": [
+      {
+        "title": "Connecting GNSS and Robotics: Toward Tightly Coupled Sensor Integration",
+        "speaker": "Taro Suzuki"
+      },
+      {
+        "title": "Ranging-Aided Localization: on the Ground, among the Drones, and into a Neural Network",
+        "speaker": "Thien-Minh Nguyen"
+      },
+      {
+        "title": "Equivariant Estimators: Using Symmetries to Cope with Challenging Ranging Observations",
+        "speaker": "Stephan Weiss"
+      },
+      {
+        "title": "Bridging navigation safety: from aviation to unmanned ground vehicles",
+        "speaker": "Matthew Spenko"
+      },
+      {
+        "title": "Beyond Gaussian: Robust Methods for State Estimation",
+        "speaker": "Daniel Medina"
+      },
+      {
+        "title": "Safety-quantifiable Joint Positioning and Control for Factor Graph",
+        "speaker": "Weisong Wen"
+      },
+      {
+        "title": "Initialization, Uncertainty, and Accuracy in Range-Based Trajectory Estimation",
+        "speaker": "Abhishek Goudar"
+      },
+      {
+        "title": "No GPS, No Problem: Exploiting Signals of Opportunity for Resilient and Accurate Autonomous Vehicle Navigation in GPS-Denied Environments",
+        "speaker": "Zak Kassas"
+      }
+    ],
+    "accepted_papers_link": "https://robotmeetsranging.tech/",
+    "paper_pdf_urls": [
+      "https://drive.google.com/file/d/1mumVUfnOurrcEUAHuZu2XE_pApNPnbR9/view?usp=sharing",
+      "https://drive.google.com/file/d/12cfRbDz_QWg702vSGe_WXtlEbSmpC38L/view?usp=sharing",
+      "https://drive.google.com/file/d/1PJ5ZebVcp7u5pRY9CIKroiTB0AZsdX6K/view?usp=sharing",
+      "https://drive.google.com/file/d/1_8fu4EGISCPLPl55Z19mXq5Qfy0au0BU/view?usp=sharing",
+      "https://drive.google.com/file/d/1dPqvtXGxSu8mgXFJOzrHnHps4w7SJ0Wl/view?usp=sharing",
+      "https://drive.google.com/file/d/15gx__XpgHieVTp-cMvUgzW84yKbFawYJ/view?usp=sharing",
+      "https://drive.google.com/file/d/1Z3_x7ITHbHQY5KWyUU-GpDSn9sz5D4Q4/view?usp=sharing",
+      "https://drive.google.com/file/d/1tZQuXAEUmIDLsfVjYBZ38NsmrZ2_xFfj/view?usp=sharing",
+      "https://drive.google.com/file/d/11WxdRykktd1IW4R0C1BQpXsUa2kHUF6S/view?usp=sharing",
+      "https://drive.google.com/file/d/1gmH2nulwEBso050tfL7Ay2KAAgXYmjNN/view?usp=sharing",
+      "https://drive.google.com/file/d/1OtFj5G7JnB4i4irmlFqJzcvWWx_Ehhrx/view?usp=sharing",
+      "https://drive.google.com/file/d/1YUjsFOpXms6WYcp2jsaGLw80ug3iONKc/view?usp=sharing",
+      "https://drive.google.com/file/d/1zCHqHgbzzaIXEKujfQf4ues6xYKm-9cG/view?usp=sharing",
+      "https://drive.google.com/file/d/1woddwQ1yRkJ0zq1UtzLRlSu-hVoHqmIQ/view?usp=sharing",
+      "https://drive.google.com/file/d/1ZaqVXL8KAq1YrxjvhuWAoWbiMjXUA0MW/view?usp=sharing",
+      "https://drive.google.com/file/d/1qxHI5HqAFPSGF30uMDqlf2KNeN0Bs7T1/view?usp=sharing",
+      "https://drive.google.com/file/d/1D8GjQ_n5rGpPvNf3wN-5iYDgSrJ9tgmO/view?usp=sharing",
+      "https://drive.google.com/file/d/1lQFSfvOocjIogosn7qeN9hiUFISp3K2S/view?usp=sharing",
+      "https://drive.google.com/file/d/12gJQm18FRnzV9t4c2x2VVnEfDhCHMix5/view?usp=sharing"
+    ]
+  },
+  {
+    "name": "20 Years of Workshops on Benchmarking and Reproducibility: Part I Reproducibility",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "http://www.reproducibleroboticsresearch.org/20YearsBenchRRR_ICRA2026",
+    "organizers": [],
+    "speakers": [],
+    "talks": [],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "2nd Workshop on e-Heritage and Robotics",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://www.cvl.iis.u-tokyo.ac.jp/EHR2026",
+    "organizers": [],
+    "speakers": [],
+    "talks": [],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "3rd Unconventional Robots: From Concept to Real-World Systems",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://sites.google.com/andrew.cmu.edu/icra26-3rd-unconv-robots/home",
+    "organizers": [
+      "Shashwat Singh",
+      "Naomi Oke",
+      "Audra Smith",
+      "Chaerim Moon",
+      "Robert Baines",
+      "Zeynep Temel",
+      "Aaron Johnson",
+      "Ryan St. Pierre",
+      "Justin Yim",
+      "Lillian Chin",
+      "Yong-Lae Park"
+    ],
+    "speakers": [
+      "Zeynep Temel",
+      "Qiu'ang Li",
+      "Mark Yim",
+      "Kento Kawaharazuka",
+      "Perla Maiolino",
+      "Nathan Usevitch",
+      "Will Johnson",
+      "Kaushik Jayaram",
+      "Kyujin Cho"
+    ],
+    "talks": [],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "4th Workshop on NeuroDesign in Human-Robot Interaction",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://neurodesign-in-hri.webflow.io/",
+    "organizers": [],
+    "speakers": [
+      "Robert Riener",
+      "Luka Peternel",
+      "Cesco Willemse",
+      "Silvia Tolu",
+      "Shunichi Kasahara",
+      "Ranjana Mehta",
+      "Stefano Caggiano",
+      "Tamar Makin",
+      "Sarah Sebo",
+      "Grace Leslie",
+      "Nataliya Kosmyna"
+    ],
+    "talks": [
+      {
+        "title": "Bioinspired Control and Wearable Intelligence for Adaptive Human-Machine Systems",
+        "speaker": "Silvia Tolu"
+      },
+      {
+        "title": "What Human-Robot Interaction Assumes About the Brain",
+        "speaker": "Tamar Makin"
+      },
+      {
+        "title": "Meaning at a Distance",
+        "speaker": "Stefano Caggiano"
+      },
+      {
+        "title": "Incorporating Human Models into Robot Control Loop",
+        "speaker": "Luka Peternel"
+      },
+      {
+        "title": "Robots as Effective Social Agents: The Role of Eye Gaze",
+        "speaker": "Cesco Willemse"
+      },
+      {
+        "title": "One Decade of Cybathlon",
+        "speaker": "Robert Riener"
+      },
+      {
+        "title": "Cybernetic Humanity",
+        "speaker": "Shunichi Kasahara"
+      },
+      {
+        "title": "Open Your Mind: Brain-Computer Interfaces",
+        "speaker": "Nataliya Kosmyna"
+      },
+      {
+        "title": "Trust as Interaction: A Neuroergonomics View",
+        "speaker": "Ranjana Mehta"
+      },
+      {
+        "title": "Helpful or Harmful? Emotional Connections between Children and Educational Robots",
+        "speaker": "Sarah Sebo"
+      }
+    ],
+    "accepted_papers_link": "https://neurodesign-in-hri.webflow.io/",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2605.30127v1"
+    ]
+  },
+  {
+    "name": "8th Workshop on Long-Term Human Motion Prediction",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://motionpredictionicra2026.github.io/",
+    "organizers": [
+      "Tim Schreiter",
+      "Andrey Rudenko",
+      "Luigi Palmieri",
+      "Boris Ivanovic",
+      "Allan Wang",
+      "Drazen Brscic",
+      "Luis Figueredo",
+      "Adriana Tapus",
+      "Achim J. Lilienthal"
+    ],
+    "speakers": [
+      "Katherine Driggs-Campbell",
+      "Zhi Yan",
+      "Jean Oh",
+      "Lukas Schmid",
+      "Kashyap Chitta",
+      "Johannes Betz",
+      "Tim Pfeifer",
+      "David Woollard",
+      "Alessandro Corbetta"
+    ],
+    "talks": [
+      {
+        "title": "On the Limitations of Prediction for Interaction and Collaborations (and some solutions)",
+        "speaker": "Katherine Driggs-Campbell"
+      },
+      {
+        "title": "From Perception to Navigation: The Sandbox of Long-Term Human Motion Prediction",
+        "speaker": "Zhi Yan"
+      },
+      {
+        "title": "Predicting under the curse of rarity: self-driving to aviation",
+        "speaker": "Jean Oh"
+      },
+      {
+        "title": "Understanding past, current, and future human motion",
+        "speaker": "Lukas Schmid"
+      },
+      {
+        "title": "World Models: The Next Frontier of Motion Prediction",
+        "speaker": "Kashyap Chitta"
+      },
+      {
+        "title": "Overcoming Blind Spots: Occlusion Consideration for Improved Autonomous Driving Safety",
+        "speaker": "Johannes Betz"
+      },
+      {
+        "title": "From Prediction to Priors: Stable Structure in Human Motion for Robot Navigation",
+        "speaker": "David Woollard"
+      },
+      {
+        "title": "Understanding Pedestrian Physics: Large-Scale Measurements, Physics-Based Modeling, and Generative AI",
+        "speaker": "Alessandro Corbetta"
+      }
+    ],
+    "accepted_papers_link": "https://lhmp2026.org/",
+    "paper_pdf_urls": [
+      "https://lhmp2026.org/assets/proceedings/papers/LHMP26_Paper_7.pdf",
+      "https://lhmp2026.org/assets/proceedings/papers/LHMP26_Paper_8.pdf",
+      "https://lhmp2026.org/assets/proceedings/papers/LHMP26_Paper_9.pdf",
+      "https://lhmp2026.org/assets/proceedings/papers/LHMP26_Paper_10.pdf",
+      "https://lhmp2026.org/assets/proceedings/papers/LHMP26_Paper_11.pdf",
+      "https://lhmp2026.org/assets/proceedings/papers/LHMP26_Paper_12.pdf",
+      "https://lhmp2026.org/assets/proceedings/papers/LHMP26_Paper_13.pdf",
+      "https://lhmp2026.org/assets/proceedings/papers/LHMP26_Paper_14.pdf",
+      "https://lhmp2026.org/assets/proceedings/papers/LHMP26_Paper_15.pdf",
+      "https://lhmp2026.org/assets/proceedings/papers/LHMP26_Paper_16.pdf",
+      "https://lhmp2026.org/assets/proceedings/papers/LHMP26_Paper_17.pdf",
+      "https://lhmp2026.org/assets/proceedings/papers/LHMP26_Paper_18.pdf",
+      "https://arxiv.org/abs/2605.20255v2",
+      "https://arxiv.org/abs/2510.00405v2"
+    ]
+  },
+  {
+    "name": "Advances and Challenges in AI-Driven Automation and Robotic System Integration with Digital Twins",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://angelafiska.github.io/icra2026-automation-workshop/",
+    "organizers": [
+      "Angela Faragasso",
+      "Birgit Vogel-Heuser",
+      "Maria Pia Fanti"
+    ],
+    "speakers": [
+      "Thrishantha Nanayakkara",
+      "Darius Burschka",
+      "Agostino Marcello Mangini",
+      "Jing Xiao",
+      "Chao Wang"
+    ],
+    "talks": [
+      {
+        "title": "Situated Heuristics-Based Evolution of Mechanically Intelligent Systems (SHAPE)",
+        "speaker": "Thrishantha Nanayakkara"
+      },
+      {
+        "title": "Vision-Based Parametrization of the Digital Twin in Dynamic Environments through Analysis of Action Constraints",
+        "speaker": "Darius Burschka"
+      },
+      {
+        "title": "A Digital Twin Approach for a New Concept of Last-Mile Delivery",
+        "speaker": "Agostino Marcello Mangini"
+      },
+      {
+        "title": "Dynamic Dense Packing of Novel Objects",
+        "speaker": "Jing Xiao"
+      },
+      {
+        "title": "XR as an Interaction Digital Twin: Teaching, Expressing, and Validating Robots with Humans in the Loop",
+        "speaker": "Chao Wang"
+      }
+    ],
+    "accepted_papers_link": "https://angelafiska.github.io/icra2026-automation-workshop/",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2603.22118v1",
+      "https://arxiv.org/abs/2507.00319v2"
+    ]
+  },
+  {
+    "name": "AI-Driven Safe Aerial Robotics",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://aerial-robotics-workshop-icra.com/",
+    "organizers": [
+      "Anibal Ollero",
+      "Giuseppe Loianno",
+      "Marco Tognon",
+      "Begona C. Arrue",
+      "Hyunchul Shim",
+      "Raphael Zufferey"
+    ],
+    "speakers": [],
+    "talks": [],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Beyond Teleoperation: Learning from Diverse Human and Simulation Data",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://icra-beyond-teleop.github.io/",
+    "organizers": [
+      "Kushal Kedia",
+      "Rutav Shah",
+      "Dvij Kalaria",
+      "Zubair Irshad",
+      "Jingyun Yang",
+      "Satvik Sharma",
+      "Himanshu Gaurav Singh",
+      "Tyler Lum",
+      "Sergey Zakharov",
+      "Jeannette Bohg",
+      "Antonio Loquercio",
+      "Yuke Zhu"
+    ],
+    "speakers": [
+      "Jitendra Malik",
+      "Edward Johns",
+      "Danfei Xu",
+      "Karen Liu",
+      "Katerina Fragkiadaki",
+      "Yue Wang",
+      "Roberto Martin-Martin",
+      "Steve Xie"
+    ],
+    "talks": [],
+    "accepted_papers_link": "https://icra-beyond-teleop.github.io/",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2506.20668v2",
+      "https://arxiv.org/abs/2404.06507v4",
+      "https://arxiv.org/abs/2511.04671v2",
+      "https://arxiv.org/abs/2604.17335v1",
+      "https://arxiv.org/abs/2512.24766v1"
+    ]
+  },
+  {
+    "name": "Bridging the Gap between Robot Learning and Human-Robot Interaction",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://sites.google.com/vt.edu/icra2026-learning-hri/",
+    "organizers": [
+      "Dylan Losey",
+      "Shuijing Liu",
+      "Xuehui Yu",
+      "Harold Soh",
+      "Yuke Zhu"
+    ],
+    "speakers": [
+      "Tapomayukh Bhattacharjee",
+      "Aude Billard",
+      "Erdem Biyik",
+      "Andreea Bobu",
+      "Yiannis Demiris",
+      "Mike Hagenow",
+      "Jens Kober",
+      "Iolanda Leite",
+      "Roberto Martin-Martin"
+    ],
+    "talks": [],
+    "accepted_papers_link": "https://sites.google.com/vt.edu/icra2026-learning-hri/",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2603.03897v3",
+      "https://arxiv.org/abs/2606.08169v1"
+    ]
+  },
+  {
+    "name": "Challenges and Opportunities of Neuromorphic Field Robotics and Automation",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "http://nfr-icra2026.com",
+    "organizers": [
+      "Fernando Cladera",
+      "Kenneth Chaney",
+      "Ziyun Claude Wang",
+      "Varun Murali",
+      "Nitin Sanket",
+      "Cornelia Fermuller",
+      "CJ Taylor",
+      "Vijay Kumar"
+    ],
+    "speakers": [
+      "Christoph Posch",
+      "Davide Scaramuzza",
+      "Chiara Bartolozzi",
+      "Guido de Croon",
+      "Yi Zhou",
+      "Paul Kirkland",
+      "Nitin Sanket",
+      "Tobias Fischer"
+    ],
+    "talks": [
+      {
+        "title": "Event-based vision for drone detection and tracking",
+        "speaker": "Christoph Posch"
+      },
+      {
+        "title": "Neuromorphic embodied engineering",
+        "speaker": "Chiara Bartolozzi"
+      },
+      {
+        "title": "Event-Enhanced Perception for High-Speed Autonomy",
+        "speaker": "Yi Zhou"
+      },
+      {
+        "title": "Neuromorphic AI for small drones",
+        "speaker": "Guido de Croon"
+      },
+      {
+        "title": "Fast, Efficient, and Robust: Neuromorphic Localisation for GPS-Denied Robotics",
+        "speaker": "Tobias Fischer"
+      },
+      {
+        "title": "Robot Perception: Did We Get It All Wrong?",
+        "speaker": "Nitin Sanket"
+      },
+      {
+        "title": "What World Models Are Missing: Cognitive Maps via Vector Symbolic Architectures",
+        "speaker": "Paul Kirkland"
+      }
+    ],
+    "accepted_papers_link": "http://nfr-icra2026.com",
+    "paper_pdf_urls": [
+      "https://arxiv.org/pdf/2605.10675",
+      "https://arxiv.org/pdf/2603.21787",
+      "https://arxiv.org/pdf/2604.18289",
+      "https://arxiv.org/pdf/2605.24691",
+      "https://arxiv.org/pdf/2605.27661",
+      "https://arxiv.org/pdf/2605.26330",
+      "https://arxiv.org/pdf/2605.28312"
+    ]
+  },
+  {
+    "name": "Embracing Intelligent Robotic Assistants for Robot-assisted Surgery in the Era of Embodied Intelligence: Trends, Opportunities, and Challenges",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://sites.google.com/view/icra26-workshop-medical-robot",
+    "organizers": [
+      "Elena De Momi",
+      "Christos Bergeles",
+      "Junling Fu",
+      "Huanyu Tian",
+      "Paolo Fiorini",
+      "Hongrui Wu"
+    ],
+    "speakers": [
+      "Federica Ferraguti",
+      "Mahdi Tavakoli",
+      "Michael Yip",
+      "Fan Shao",
+      "David Noonan",
+      "Gerardo Mendizabal",
+      "Lin Zhang",
+      "Christos Bergeles",
+      "Hongliang Ren",
+      "Riccardo Muradore",
+      "Elena De Momi"
+    ],
+    "talks": [],
+    "accepted_papers_link": "https://openreview.net/group?id=IEEE.org/ICRA/2026/Workshop/RASEI",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2602.21893v2",
+      "https://arxiv.org/abs/2511.17777v2"
+    ]
+  },
+  {
+    "name": "Emerging paradigms for robotic manipulation: the reality of extreme conditions",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://sites.google.com/unisi.it/ws-extrememanipulation",
+    "organizers": [
+      "Virginia Ruiz Garate",
+      "Maria Pozzi",
+      "Francesca Negrello"
+    ],
+    "speakers": [
+      "Joseph McIntyre",
+      "Oussama Khatib",
+      "Nils Dengler",
+      "Maximo Roa",
+      "Manuel Catalano"
+    ],
+    "talks": [
+      {
+        "title": "Human reaching, grasping and manipulation on orbit: Insights for robotic manipulation in weightlessness",
+        "speaker": "Joseph McIntyre"
+      },
+      {
+        "title": "Human-Robot Collaboration: Remote Physical Intervention from Deep-Sea Exploration to Complex Medical Procedures",
+        "speaker": "Oussama Khatib"
+      },
+      {
+        "title": "Challenges in Robotic Manipulation for Fresco Assembly",
+        "speaker": "Nils Dengler"
+      },
+      {
+        "title": "Robotic Manipulation, Assembly and Manufacturing in the new Space Race",
+        "speaker": "Maximo Roa"
+      },
+      {
+        "title": "Manipulating the Extreme: From Object Grasping to Ground Manipulation",
+        "speaker": "Manuel Catalano"
+      }
+    ],
+    "accepted_papers_link": "https://sites.google.com/unisi.it/ws-extrememanipulation",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2505.10552v2"
+    ]
+  },
+  {
+    "name": "Enabling Autonomy and Independence in Aging Societies through Advanced Robotics and AI: Methods, Challenges, and Future Perspectives",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://sites.google.com/view/robotic-for-aging-society/homepage/",
+    "organizers": [
+      "Zhongchao Zhou",
+      "Darwin Caldwell",
+      "Liang He",
+      "Ryman Hashem",
+      "Wenwei Yu",
+      "Bin He",
+      "Shuo Jiang",
+      "Yuxi Lu",
+      "Yusuke Iwasawa",
+      "Yaonan Zhu",
+      "Gang Yan",
+      "Simona Gandah"
+    ],
+    "speakers": [
+      "Gordon Cheng",
+      "Darwin Caldwell",
+      "Yanmin Zhou",
+      "Mustafa Suphi Erden",
+      "Naonori Kodate",
+      "Gastone Ciuti",
+      "Shigeru Masuyama",
+      "Kazuko Obayashi",
+      "Yue Gao"
+    ],
+    "talks": [
+      {
+        "title": "Humanoids in Healthcare and Welfare: A Careful Transition",
+        "speaker": "Gordon Cheng"
+      },
+      {
+        "title": "Dynamic Tactile Sensor (DTS) with Edge Intelligence for Safe Human-Robot Interaction",
+        "speaker": "Yanmin Zhou"
+      },
+      {
+        "title": "Physical human-robot interaction for assistive and rehabilitation purposes: Can these be translated to elderly-support technologies?",
+        "speaker": "Mustafa Suphi Erden"
+      },
+      {
+        "title": "In search of person-centred robotics-aided care: Challenges and opportunities in the co-design of assistive robots for care settings",
+        "speaker": "Naonori Kodate"
+      },
+      {
+        "title": "Proximity-Driven Healthcare: Towards a New Paradigm of Screening",
+        "speaker": "Gastone Ciuti"
+      },
+      {
+        "title": "The Use of Robots and AI in Residential Care Facilities and their Impact on Care and Caring: A Frontline Perspective",
+        "speaker": "Shigeru Masuyama & Kazuko Obayashi"
+      },
+      {
+        "title": "From Simulation to Real-World Assistance: Robust Learning for Legged Robots in Aging Environments",
+        "speaker": "Yue Gao"
+      }
+    ],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Field Robotics",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://norlab-ulaval.github.io/icra_workshop_field_robotics/",
+    "organizers": [
+      "Francois Pomerleau",
+      "Johann Laconte",
+      "Joshua Mangelson",
+      "Marco Hutter",
+      "Stephanie Aravecchia",
+      "Edith Brotherton"
+    ],
+    "speakers": [
+      "Tim Barfoot",
+      "Cedric Pradalier",
+      "Nicholas Roy",
+      "Nina Mahmoudian",
+      "Katie Driggs-Campbell"
+    ],
+    "talks": [
+      {
+        "title": "Lunar Cargo Logistics: Multi-Robot Cooperative Transport on the Moon",
+        "speaker": "Tim Barfoot"
+      },
+      {
+        "title": "Autonomous Robotic Inspection on Ship Hulls and Storage Tanks",
+        "speaker": "Cedric Pradalier"
+      },
+      {
+        "title": "Scaling field robotics in the age of LLMs",
+        "speaker": "Nicholas Roy"
+      },
+      {
+        "title": "Field-deployable maritime autonomy through energy-aware planning, docking, and coordination",
+        "speaker": "Nina Mahmoudian"
+      },
+      {
+        "title": "Towards Agricultural Robots with Humans in and on the Loop",
+        "speaker": "Katie Driggs-Campbell"
+      }
+    ],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "From Data to Decisions: VLA Pipelines for Real Robots",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://icra2026vlapipeline.github.io/",
+    "organizers": [
+      "Yueh-Hua (Kris) Wu",
+      "Kei Ota",
+      "Jun Yamada",
+      "Ingmar Posner",
+      "Tatsuya Matsushima",
+      "Tetsuya Ogata",
+      "Ishika Singh"
+    ],
+    "speakers": [
+      "Karl Pertsch",
+      "Alberto Rodriguez",
+      "Yuke Zhu",
+      "Tetsuya Ogata",
+      "Katherine Liu",
+      "Masha Itkina"
+    ],
+    "talks": [],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Geometry in the Age of Data-Driven Robotics",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://geometric-robotics.github.io/icra-2026-workshop/",
+    "organizers": [
+      "Riddhiman Laha",
+      "Tobias Low",
+      "Jake Welde"
+    ],
+    "speakers": [
+      "Noemie Jaquier",
+      "Frank Park",
+      "Andreas Muller",
+      "Stefano Stramigioli",
+      "Patrick Wensing",
+      "Ross Hatton",
+      "Antonio Franchi",
+      "Georgia Chalvatzaki",
+      "David Rosen",
+      "Bruno Vilhena Adorno",
+      "Seth Hutchinson",
+      "Nadia Figueroa"
+    ],
+    "talks": [
+      {
+        "title": "Quantifying Action Uncertainty with Inaccurate Stochastic Dynamics through Conformalized Lie groups",
+        "speaker": "Luis Marques"
+      },
+      {
+        "title": "Graph-Based Reward Learning and Automatic Subtask Discovery for Long-Horizon Manipulation",
+        "speaker": "Andrea Protopapa"
+      },
+      {
+        "title": "Cross-space Symmetry Composition in Robotics",
+        "speaker": "Loizos Hadjiloizou"
+      },
+      {
+        "title": "Morphologically Equivariant Flow Matching for Bimanual Mobile Manipulation",
+        "speaker": "Max Siebenborn"
+      },
+      {
+        "title": "Lie Group Error Coordinates for Symmetry-Aware Reinforcement Learning applied to Quadrotor Low-Level Control",
+        "speaker": "Andrea Pagnini"
+      },
+      {
+        "title": "Lagrangian Neural Fields for Infinite-Dimensional Dynamics Modeling",
+        "speaker": "Riccardo Morandi"
+      }
+    ],
+    "accepted_papers_link": "https://geometric-robotics.github.io/icra-2026-workshop/",
+    "paper_pdf_urls": [
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/deng-internalizing-geometric-stability-for-learning.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/lu-efficient-collision-avoidance-for-multi.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/xue-humanoidpf-collision-free-humanoid-traversal.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/rashad-the-port-hamiltonian-structure-of.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/xu-ergodic-imitation-for-adaptive-exploration.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/morandi-lagrangian-neural-fields-for-infinite.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/zhao-sq-cbf-signed-distance-functions.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/vrablikova-introducing-sylvester-forms-to-robotics.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/marques-quantifying-action-uncertainty-with-inaccurate.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/kanai-digging-into-learned-camera-self.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/pompetzki-geometry-aware-probabilistic-shared-autonomy.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/buoso-gap-geometric-anchor-pre-training.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/siebenborn-morphologically-equivariant-flow-matching-for.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/meriaux-learning-to-cover-imitation-learning.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/maese-explicit-geometry-for-cpu-efficient.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/muhlbauer-geometric-and-model-priors-in.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/veksler-from-cylinders-to-complex-shapes.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/pagnini-lie-group-error-coordinates-for.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/zhang-kinematics-informed-data-enabled-predictive.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/protopapa-graph-based-reward-learning-and.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/hadjiloizou-cross-space-symmetry-composition-in.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/cohn-planning-along-differentiable-charts-of.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/verduyn-extended-abstract.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/karke-object-pose-and-shape-estimation.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/schulze-towards-modularity-in-floating-base.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/wolf-equivariant-in-context-learning-for.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/tekden-reactive-motion-generation-via-phase.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/david-learning-transferable-motor-skills-for.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/bhattacharya-integrating-topological-object-recognition-into.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/schwarz-topological-priors.pdf",
+      "https://geometric-robotics.github.io/icra-2026-workshop/papers/goswami-topological-cage-navigation.pdf"
+    ]
+  },
+  {
+    "name": "How Origami and Kirigami Have Revolutionized Robotics and What's Beyond?",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://sites.google.com/view/origamirob",
+    "organizers": [
+      "Zhuang Zhang",
+      "Shuguang Li",
+      "Liang He",
+      "Xiaonan (Sean) Huang",
+      "Wenbo Li",
+      "Jamie Paik"
+    ],
+    "speakers": [
+      "Yan Chen",
+      "Kyujin Cho",
+      "Hanqing Jiang",
+      "Bo Li",
+      "Shuhei Miyashita",
+      "Cagdas Onal",
+      "Damiano Pasini",
+      "Hongliang Ren",
+      "Sneha K Rhode",
+      "Robert F. Shepherd",
+      "Jie Yin",
+      "Renee Zhao"
+    ],
+    "talks": [],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Human-Inspired Principles for Robotic Dexterous Manipulation: What Are We Missing?",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://sites.google.com/view/humaninspiredrobotmanipulation",
+    "organizers": [
+      "Federico Tessari",
+      "Cristina Piazza",
+      "A. Michael West Jr.",
+      "Neville Hogan"
+    ],
+    "speakers": [
+      "Marco Santello",
+      "Lael Odhner",
+      "Josie Hughes",
+      "Antonio Bicchi",
+      "Quentin Sanders",
+      "Neville Hogan",
+      "Atsushi Takagi",
+      "Kait Becker",
+      "Huang Huishi",
+      "Richard Walker"
+    ],
+    "talks": [],
+    "accepted_papers_link": "https://sites.google.com/view/humaninspiredrobotmanipulation",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2505.10552v2"
+    ]
+  },
+  {
+    "name": "Open Challenges in Robotics for Asset Inspection and Management (OCRAIM)",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://ariamhub.com/ocraim/",
+    "organizers": [
+      "Yiduo Wang",
+      "Marcus Hoerger",
+      "Viorela Ila",
+      "Ian Manchester",
+      "Donald Dansereau",
+      "Rahul Shome",
+      "Thierry Peynot",
+      "Dimity Miller",
+      "Maurice Fallon",
+      "Hanna Kurniawati"
+    ],
+    "speakers": [
+      "Ian Manchester",
+      "Martin Saska",
+      "Margarita Chli",
+      "Chao Xu",
+      "Jaime Valls Miro",
+      "Ayoung Kim",
+      "Christian Gehring",
+      "Suchet Bargoti",
+      "Maani Ghaffari",
+      "Stefan Williams",
+      "David Wisth"
+    ],
+    "talks": [
+      {
+        "title": "Indoor and outdoor inspection of industrial infrastructure by fully autonomous flying robots",
+        "speaker": "Martin Saska"
+      },
+      {
+        "title": "Perception for aerial inspection",
+        "speaker": "Margarita Chli"
+      },
+      {
+        "title": "Diving into the forest with robotic systems",
+        "speaker": "Chao Xu"
+      },
+      {
+        "title": "Mapping the Condition of Critical Pipeline Infrastructure with NDT Robotic Crawlers",
+        "speaker": "Jaime Valls Miro"
+      },
+      {
+        "title": "Seeing What Changed: Toward Lifelong Mapping for Persistent Asset Monitoring",
+        "speaker": "Ayoung Kim"
+      },
+      {
+        "title": "Towards ship scanning in a day: robotics for above water, undersea and interior survey of marine assets",
+        "speaker": "Stefan Williams"
+      },
+      {
+        "title": "From Moonshots to Reality: Legged Robots for Autonomous Asset Inspection",
+        "speaker": "Christian Gehring"
+      },
+      {
+        "title": "From research to product: Asset management using handheld scanners",
+        "speaker": "David Wisth"
+      },
+      {
+        "title": "Aerial imaging and Inspection",
+        "speaker": "Suchet Bargoti"
+      },
+      {
+        "title": "Computational Symmetry and Learning for Robotics",
+        "speaker": "Maani Ghaffari"
+      }
+    ],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Perceptual Challenges for Planetary Exploration: Enabling The Next Generation of Space Robotic Missions",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://icra2026-planetary-robotics.github.io/",
+    "organizers": [
+      "Riccardo Giubilato",
+      "David Rodriguez Martinez",
+      "Olivier Lamarre",
+      "Kentaro Uno",
+      "Raul Castilla Arquillo",
+      "Carol Martinez Luna",
+      "Renaud Detry"
+    ],
+    "speakers": [
+      "Lukas Burkhard",
+      "Masahiro Ono",
+      "Jean Pierre De la Croix",
+      "Marco Hutter",
+      "Annika Thomas",
+      "Davide Scaramuzza",
+      "Tim Barfoot"
+    ],
+    "talks": [],
+    "accepted_papers_link": "https://openreview.net/group?id=IEEE.org/ICRA/2026/Workshop/Planetary_Robotics",
+    "paper_pdf_urls": [
+      "https://openreview.net/pdf?id=UotwGisH8U",
+      "https://openreview.net/pdf?id=ytZHRN8wWZ",
+      "https://openreview.net/pdf?id=IwUnmoskTD",
+      "https://openreview.net/pdf?id=pDcxtHEWj3",
+      "https://openreview.net/pdf?id=nG56ZOyfQ6",
+      "https://openreview.net/pdf?id=cXE2wftBIu",
+      "https://openreview.net/pdf?id=pRIE46FGvL",
+      "https://openreview.net/pdf?id=2AfvvuLr0I",
+      "https://openreview.net/pdf?id=ukqX2heyt4",
+      "https://openreview.net/pdf?id=FZgRTBgNJA",
+      "https://openreview.net/pdf?id=nNPIozbpjD"
+    ]
+  },
+  {
+    "name": "REaCT: Robotics for Environmental Assessment and Climate action",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://sites.google.com/view/react-climate-robotics/",
+    "organizers": [
+      "Raphael Zufferey",
+      "Stefano Mintchev",
+      "Berk Calli",
+      "Simona Aracri",
+      "Andreas Holzinger",
+      "Jean-Baptiste Weibel"
+    ],
+    "speakers": [
+      "Ulrik Lundquist",
+      "Blaire Costelloe",
+      "Janine Schweier",
+      "Christoffer Heckman",
+      "Aaron Johnson",
+      "Katharina Keiblinger",
+      "Alan Papalia",
+      "Jenna Lawson",
+      "Donato Romano",
+      "Jan Peters"
+    ],
+    "talks": [],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "RoboARCH: Robotics Acceleration with Computing Hardware and Systems",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://sites.google.com/view/roboarch-icra26",
+    "organizers": [
+      "Brian Plancher",
+      "Sabrina M. Neuman",
+      "Zak Kingston",
+      "Thomas Bourgeat",
+      "R. Iris Bahar",
+      "Wil Thomason"
+    ],
+    "speakers": [
+      "Andreas Orthey",
+      "Mainak Biswas",
+      "Ashish Rao Mangalore",
+      "Davide Scaramuzza",
+      "An Thai Le",
+      "Songchen MA",
+      "Thai Duong",
+      "Brian Jackson"
+    ],
+    "talks": [],
+    "accepted_papers_link": "https://sites.google.com/view/roboarch-icra26",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2605.13748v1",
+      "https://arxiv.org/abs/2510.01948v2"
+    ]
+  },
+  {
+    "name": "RoboTac 2026: Embodied Tactile Intelligence in Predictive Perception, Learning, & Control in Grasp & Manipulation",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://www.robotac.eu/robotac-2026",
+    "organizers": [
+      "Mohsen Kaboli",
+      "Pietro Dardano",
+      "Irene Kuling",
+      "Robert Haschke",
+      "Patrick van der Smagt",
+      "Fumiya Iida"
+    ],
+    "speakers": [
+      "Marcia O'Malley",
+      "Yasemin Vardar"
+    ],
+    "talks": [
+      {
+        "title": "Human perception of Referred Haptic feedback for Virtual Object Interactions",
+        "speaker": "Marcia O'Malley"
+      },
+      {
+        "title": "Decoding Human Texture Perception with Interpretable Machine Learning",
+        "speaker": "Yasemin Vardar"
+      }
+    ],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Robots Meet Prior Maps: Leveraging Geometric and Semantic Priors for Real-World Robot Autonomy",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://sites.google.com/view/icra2026-priors-map-workshop/home",
+    "organizers": [
+      "Liang Lu",
+      "Yinqiang Zhang",
+      "Jose-Luis Sanchez-Lopez",
+      "Maolin Lei",
+      "Matteo Leonetti",
+      "Darwin G. Caldwell",
+      "Javier Civera",
+      "Jia Pan"
+    ],
+    "speakers": [
+      "David Hsu",
+      "Abhinav Valada",
+      "Jen Jen Chung",
+      "Jose-Luis Sanchez-Lopez",
+      "Ji Zhang",
+      "Haokun Zhu",
+      "Javier Civera",
+      "Luca Carlone",
+      "Huan Yin",
+      "Maurice Fallon",
+      "Xiaolong Wang"
+    ],
+    "talks": [],
+    "accepted_papers_link": "https://sites.google.com/view/icra2026-priors-map-workshop/accepted-papers",
+    "paper_pdf_urls": [
+      "https://openreview.net/pdf?id=4HZgkwVVFO",
+      "https://openreview.net/pdf?id=vLtS0ZDL73",
+      "https://openreview.net/pdf?id=49uZoSrMZI",
+      "https://openreview.net/pdf?id=MYqO1g39uy",
+      "https://openreview.net/pdf?id=rYOqxbLwyh",
+      "https://openreview.net/pdf?id=uMoX27VOyY",
+      "https://openreview.net/pdf?id=6qkdDhfhWn",
+      "https://arxiv.org/abs/2603.01613",
+      "https://arxiv.org/abs/2604.27821",
+      "https://arxiv.org/abs/2602.12971",
+      "https://arxiv.org/abs/2605.26944",
+      "https://arxiv.org/abs/2507.12753",
+      "https://arxiv.org/abs/2604.24707",
+      "https://arxiv.org/abs/2604.25388",
+      "https://arxiv.org/abs/2412.16875"
+    ]
+  },
+  {
+    "name": "Scaling Compositional Intelligence for Multi-Agent Robotic Systems",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://mars-eai.github.io/ICRA-SCI-MARS-Webpage/",
+    "organizers": [
+      "Yiran Qin",
+      "Bruno Chen",
+      "Yilun Du",
+      "Jiayuan Mao",
+      "Nur Muhammad Shafiullah",
+      "Fangchen Liu",
+      "Zhemeng Zhang",
+      "Li Kang",
+      "Heng Zhou",
+      "Zhenfei Yin",
+      "Ruimao Zhang"
+    ],
+    "speakers": [
+      "Marco Pavone",
+      "Yao Mu",
+      "Yinghao Xu",
+      "Eugene Vinitsky"
+    ],
+    "talks": [],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Semantics for Reliable Robot Autonomy: From Environment Understanding and Reasoning to Safe Interaction",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://www.dynsyslab.org/icra2026-workshop-on-semantics-for-reliable-robot-autonomy/",
+    "organizers": [
+      "Angela Schoellig",
+      "Somil Bansal",
+      "SiQi Zhou",
+      "Oier Mees",
+      "Lukas Brunke",
+      "Benjamin Bogenberger",
+      "Niklas Schlueter",
+      "Haoming Zhang"
+    ],
+    "speakers": [
+      "Milan Ganai",
+      "Manolis Savva",
+      "Lukas Rosenberger Schmid",
+      "Ken Goldberg",
+      "Mengdi Xu",
+      "Dongheui Lee",
+      "Masha Itkina",
+      "George Pappas"
+    ],
+    "talks": [],
+    "accepted_papers_link": "https://www.dynsyslab.org/icra2026-workshop-on-semantics-for-reliable-robot-autonomy/",
+    "paper_pdf_urls": [
+      "https://openreview.net/attachment?id=FjjDqommMK&name=pdf",
+      "https://openreview.net/attachment?id=oMOpXYZJ8v&name=pdf",
+      "https://openreview.net/attachment?id=WGyXVAfAqR&name=pdf",
+      "https://openreview.net/attachment?id=IkUhq9v0JX&name=pdf",
+      "https://openreview.net/attachment?id=1aaWTejVLX&name=pdf",
+      "https://openreview.net/attachment?id=xXrDiTMLH5&name=pdf",
+      "https://openreview.net/attachment?id=aOrQSYmp9L&name=pdf",
+      "https://openreview.net/attachment?id=rYOqxbLwyh&name=pdf",
+      "https://openreview.net/attachment?id=PqZOaoqtso&name=pdf",
+      "https://openreview.net/attachment?id=2oMctsz534&name=pdf",
+      "https://openreview.net/attachment?id=hKPbg5pu4q&name=pdf",
+      "https://openreview.net/attachment?id=rv6VhBMW7I&name=pdf",
+      "https://openreview.net/attachment?id=ZzABFRPCr9&name=pdf",
+      "https://openreview.net/attachment?id=Dwya5QWvED&name=pdf",
+      "https://openreview.net/attachment?id=MmtkpTDfwN&name=pdf",
+      "https://openreview.net/attachment?id=OjVJRVwGS7&name=pdf",
+      "https://openreview.net/attachment?id=Fjhagih2vV&name=pdf",
+      "https://openreview.net/attachment?id=uMoX27VOyY&name=pdf",
+      "https://openreview.net/attachment?id=NMQ9Qw5j3i&name=pdf",
+      "https://openreview.net/attachment?id=MqiKNCxZOu&name=pdf",
+      "https://openreview.net/attachment?id=6qkdDhfhWn&name=pdf",
+      "https://openreview.net/attachment?id=hnAp82m78m&name=pdf",
+      "https://openreview.net/attachment?id=G7NAwtCjdV&name=pdf",
+      "https://openreview.net/attachment?id=tgZFh6O1xW&name=pdf",
+      "https://openreview.net/attachment?id=NtTlOzgUkc&name=pdf",
+      "https://openreview.net/attachment?id=w4rhh0VpES&name=pdf",
+      "https://openreview.net/attachment?id=XEB7wJSFbQ&name=pdf",
+      "https://openreview.net/attachment?id=05Zf4KJrRn&name=pdf",
+      "https://openreview.net/attachment?id=R2I0asfyZT&name=pdf",
+      "https://openreview.net/attachment?id=juTZvTVQvT&name=pdf",
+      "https://openreview.net/attachment?id=inQPnS3D75&name=pdf",
+      "https://openreview.net/attachment?id=PF9lhBseXQ&name=pdf",
+      "https://openreview.net/attachment?id=KG9QYhLIBV&name=pdf",
+      "https://openreview.net/attachment?id=9vqwDyFhDX&name=pdf",
+      "https://openreview.net/attachment?id=gnpxmJ3S2j&name=pdf",
+      "https://openreview.net/attachment?id=s6rxtvo20o&name=pdf",
+      "https://openreview.net/attachment?id=LFHg6tcn7e&name=pdf",
+      "https://openreview.net/attachment?id=Ft2t57khSZ&name=pdf",
+      "https://openreview.net/attachment?id=NUu9P1LwbT&name=pdf",
+      "https://openreview.net/attachment?id=63dSwa83gC&name=pdf",
+      "https://openreview.net/attachment?id=4SSJXzXnxM&name=pdf"
+    ]
+  },
+  {
+    "name": "Soft & Safe? Rethinking the Role of Softness in Medical Robotics",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://sites.google.com/view/rethinkingsoftness/home",
+    "organizers": [
+      "Mostafa A. Atalla",
+      "Susheela Sharma",
+      "Tania Morimoto",
+      "Thrishantha Nanayakkara",
+      "Robert J. Webster III",
+      "Arianna Menciassi"
+    ],
+    "speakers": [],
+    "talks": [],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Tailored to Move: Wearable Robotics for Motion Assistance",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://sites.google.com/view/tailored-to-move-icra2026/home",
+    "organizers": [
+      "Panagiotis Polygerinos",
+      "Jan Babic",
+      "Jonathan Rossiter",
+      "Mohamed Irfan Refai",
+      "Letizia Gionfrida",
+      "Thomas George Thuruthel",
+      "Richard Suphapol Diteesawat",
+      "Aikaterini Smyrli"
+    ],
+    "speakers": [],
+    "talks": [],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Uncertainty in Open-World Robotics",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://uncertainty-in-robotics.github.io/",
+    "organizers": [
+      "Lucas Nunes",
+      "Matteo Sodano",
+      "Federico Magistri",
+      "Hermann Blum",
+      "Garvita Allabadi",
+      "Xieyuanli Chen",
+      "Dimity Miller",
+      "Cyrill Stachniss"
+    ],
+    "speakers": [
+      "Nicholas Roy",
+      "Abhinav Valada",
+      "Marija Popovich",
+      "Siyuan Huang"
+    ],
+    "talks": [],
+    "accepted_papers_link": "https://uncertainty-in-robotics.github.io/accepted_papers.html",
+    "paper_pdf_urls": [
+      "https://arxiv.org/abs/2606.01363",
+      "https://arxiv.org/abs/2511.07619",
+      "https://arxiv.org/abs/2503.17395",
+      "https://arxiv.org/abs/2606.00313",
+      "https://arxiv.org/abs/2511.09558",
+      "https://arxiv.org/abs/2605.13028",
+      "https://arxiv.org/abs/2508.07387",
+      "https://arxiv.org/abs/2606.06721",
+      "https://arxiv.org/abs/2606.04853",
+      "https://arxiv.org/abs/2503.19317",
+      "https://arxiv.org/abs/2510.06754"
+    ]
+  },
+  {
+    "name": "Workshop on Intelligent Space Robotics and Systems",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://space-robotics-workshop.github.io/",
+    "organizers": [
+      "Holly Dinkel",
+      "Julia Di",
+      "Su-Yeon Choi",
+      "David Rodriguez-Martinez",
+      "Carol Martinez",
+      "Keenan Albee",
+      "Yasmin Ansari",
+      "Lennart Puck",
+      "Hiro Ono",
+      "Abhishek Cauligi"
+    ],
+    "speakers": [
+      "Carlos Perez del Pulgar",
+      "Christian Ott",
+      "Dongheui Lee",
+      "Emma Zemler",
+      "Genya Ishigami",
+      "Giusy Falcone",
+      "Kuldeep Barad"
+    ],
+    "talks": [
+      {
+        "title": "Challenges on Robotic Exploration of Lava Caves on the Moon and Mars",
+        "speaker": "Carlos Perez del Pulgar"
+      },
+      {
+        "title": "Perception and Autonomy: A Space Industry Perspective",
+        "speaker": "Kuldeep Barad"
+      },
+      {
+        "title": "Weak-Force Actuation for Space Mobility: Attitude, Drag, and Lasers",
+        "speaker": "Giusy Falcone"
+      },
+      {
+        "title": "Robot Learning and Shared Autonomy for Lunar Assembly Tasks",
+        "speaker": "Dongheui Lee"
+      },
+      {
+        "title": "NASA Ignition and iMETRO (Integrated Mobile Evaluation Testbed for Robotics Operations)",
+        "speaker": "Emma Zemler"
+      },
+      {
+        "title": "From Explorers to Builders: Design and Demonstration of Robotic Mobility and Tools for Lunar ISRU and Construction",
+        "speaker": "Genya Ishigami"
+      },
+      {
+        "title": "Increasing Transparency in Teleoperation Under Large Time-Delays for Orbital and Planetary Space Applications",
+        "speaker": "Christian Ott"
+      }
+    ],
+    "accepted_papers_link": "https://openreview.net/group?id=IEEE.org/ICRA/2026/Workshop/SRW",
+    "paper_pdf_urls": [
+      "https://openreview.net/forum?id=YdtCNcDCIV",
+      "https://openreview.net/forum?id=JKaSY8b5vz",
+      "https://openreview.net/forum?id=cGwkVBcNdN",
+      "https://openreview.net/forum?id=SN9Ucasg05",
+      "https://openreview.net/forum?id=jCCkIjWTai",
+      "https://openreview.net/forum?id=dNlrXBh5AS",
+      "https://openreview.net/forum?id=jzZMkVa2Tp",
+      "https://openreview.net/forum?id=QdGDe6JtjX",
+      "https://openreview.net/forum?id=q14eaXcWg2",
+      "https://openreview.net/forum?id=xWFFMqySMY",
+      "https://openreview.net/forum?id=xmCJpLiJx6",
+      "https://openreview.net/forum?id=oZHm3xFZEp",
+      "https://openreview.net/forum?id=XB3AtsX9hB",
+      "https://openreview.net/forum?id=TT4HIpceHl",
+      "https://openreview.net/forum?id=Bh5VNntwcj",
+      "https://openreview.net/forum?id=f5BWqXA69U",
+      "https://openreview.net/forum?id=IiqmRWRRNo",
+      "https://openreview.net/forum?id=m6zozSCGwh",
+      "https://openreview.net/forum?id=q8j7cENSf8",
+      "https://openreview.net/forum?id=OujDdCpd70",
+      "https://openreview.net/forum?id=pzm381jrHF",
+      "https://openreview.net/forum?id=IPPoOgFoss",
+      "https://openreview.net/forum?id=l7LOJ8MDLJ",
+      "https://openreview.net/forum?id=Jkx3OydlWX",
+      "https://openreview.net/forum?id=7b3bwvxO1z",
+      "https://openreview.net/forum?id=wTSsjOzhcA",
+      "https://openreview.net/forum?id=R03bPr66qe",
+      "https://openreview.net/forum?id=Ci3XCH6qpN"
+    ]
+  },
+  {
+    "name": "Workshop on Manipulation Robustness: Towards Human-Level Robustness under Real-World Challenges",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://manipulation-robustness.github.io/icra2026/",
+    "organizers": [
+      "Yifei Dong",
+      "Jinzhou Li",
+      "Hui Zhang",
+      "Teng Xue",
+      "Zhanyi Sun",
+      "Quan Gao",
+      "Manuel Baum",
+      "Lujie Yang",
+      "Florian T. Pokorny",
+      "Sylvain Calinon",
+      "Xianyi Cheng"
+    ],
+    "speakers": [
+      "Andrea Bajcsy",
+      "Haozhi Qi",
+      "Jie Song",
+      "Josie Hughes",
+      "Oliver Brock"
+    ],
+    "talks": [
+      {
+        "title": "From Hand-object-interaction Synthesis to Dexterous Robot Manipulation",
+        "speaker": "Jie Song"
+      },
+      {
+        "title": "The Atomic Skill Approach to Robust Robotic Dexterity",
+        "speaker": "Haozhi Qi"
+      },
+      {
+        "title": "Robustness and Generality = Bridging the Gap Between Small and Large Worlds",
+        "speaker": "Oliver Brock"
+      },
+      {
+        "title": "What Does Robustness Mean in the Era of Generalist Robots?",
+        "speaker": "Andrea Bajcsy"
+      },
+      {
+        "title": "Exploiting Embodied Intelligence and Compliance for Robust Manipulation",
+        "speaker": "Josie Hughes"
+      },
+      {
+        "title": "Principles and Pathways to Human-Level Robustness",
+        "speaker": ""
+      }
+    ],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  },
+  {
+    "name": "Xplore: Cross-Disciplinary aspects of Exploration in Robotics, Reinforcement Learning, and Search",
+    "type": "workshop",
+    "day": "Friday",
+    "url": "https://xplore-workshop.github.io/",
+    "organizers": [
+      "Zlatan Ajanovic",
+      "Marija Popovic",
+      "Pulkit Verma"
+    ],
+    "speakers": [
+      "Steve LaValle",
+      "Jen Jen Chung",
+      "Peter Auer",
+      "Hermann Blum",
+      "Antonin Raffin",
+      "Bakir Lacevic",
+      "Jens Kober",
+      "Sebastian Tschiatschek"
+    ],
+    "talks": [],
+    "accepted_papers_link": "https://xplore-workshop.github.io/papers/",
+    "paper_pdf_urls": [
+      "https://openreview.net/forum?id=gisrpvCkLR",
+      "https://openreview.net/forum?id=aSdoatNZc1",
+      "https://openreview.net/forum?id=MQhuD5pw0r",
+      "https://openreview.net/forum?id=W2RWHb9Cl0",
+      "https://openreview.net/forum?id=e3H26t7c4f",
+      "https://openreview.net/forum?id=0qEtv31jGe",
+      "https://openreview.net/forum?id=4Yq3WPEHOb",
+      "https://openreview.net/forum?id=CK20xxwrOH",
+      "https://openreview.net/forum?id=QlcfQJpbET",
+      "https://openreview.net/forum?id=jjUEN9wzRL",
+      "https://openreview.net/forum?id=tbvhPL9Ftk",
+      "https://openreview.net/forum?id=a7LBBuCaUl",
+      "https://openreview.net/forum?id=Iy9vjfDvHv",
+      "https://openreview.net/forum?id=zxinuYvMp2",
+      "https://openreview.net/forum?id=c0L2mPPPJr",
+      "https://openreview.net/forum?id=x3cZRhzUe5",
+      "https://openreview.net/forum?id=k5x4aWvFWE",
+      "https://openreview.net/forum?id=mwAwrd8UGm",
+      "https://openreview.net/forum?id=DaPk8eZzBG",
+      "https://openreview.net/forum?id=Uyax92xcZI",
+      "https://openreview.net/forum?id=BYJdUjKSdb",
+      "https://openreview.net/forum?id=RfLYChc7Jp",
+      "https://openreview.net/forum?id=uY7FiYKRM1",
+      "https://openreview.net/forum?id=i2EcFHmwbk",
+      "https://openreview.net/forum?id=lyok0mKe7e",
+      "https://openreview.net/forum?id=Ia4AR2F46s"
+    ]
+  },
+  {
+    "name": "Hands-on Tutorial: 3D tactile sensor integration in robotic fingers for smart manipulation",
+    "type": "tutorial",
+    "day": "Friday",
+    "url": "https://mech.vub.ac.be/multibody/ICRA_conference_workshop.htm",
+    "organizers": [
+      "Milan Amighi",
+      "Constantin Scholz",
+      "Bram Vanderborght"
+    ],
+    "speakers": [],
+    "talks": [],
+    "accepted_papers_link": null,
+    "paper_pdf_urls": []
+  }
+]
