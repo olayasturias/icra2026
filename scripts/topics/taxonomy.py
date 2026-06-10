@@ -115,7 +115,19 @@ TOPICS: list[dict] = [
 ]
 
 IDS = [t["id"] for t in TOPICS]
-GROUPS = sorted({t["group"] for t in TOPICS})
+
+# Group -> colour (3Blue1Brown / Manim palette), in legend order.
+GROUP_COLORS = {
+    "Estimation & Mapping": "#58C4DD",
+    "Perception": "#5CD0B3",
+    "Learning": "#F0AC5F",
+    "Manipulation": "#FC6255",
+    "Locomotion & Platforms": "#83C167",
+    "Planning & Control": "#E8C547",
+    "Applications": "#CF8DE5",
+    "Methods & Tooling": "#E07A9B",
+}
+GROUPS = list(GROUP_COLORS.keys())
 
 
 def taxonomy_prompt() -> str:

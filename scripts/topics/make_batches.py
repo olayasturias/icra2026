@@ -21,16 +21,19 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 METADATA_JSON = ROOT / "data" / "metadata.json"
 WORKSHOP_JSON = ROOT / "data" / "workshop_papers.json"
-TAGS_JSON = ROOT / "data" / "topics" / "tags.json"
-BATCH_DIR = ROOT / "data" / "topics" / "batches"
 
-ABSTRACT_CHARS = 600  # enough signal for topic classification, keeps batches small
+ABSTRACT_CHARS = 600  # enough signal for classification, keeps batches small
 
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser()
+    ap.add_argument("--kind", default="topics", choices=["topics", "platforms"],
+                    help="which categorization to shard for")
     ap.add_argument("--size", type=int, default=150, help="papers per batch")
     args = ap.parse_args(argv)
+
+    TAGS_JSON = ROOT / "data" / args.kind / "tags.json"
+    BATCH_DIR = ROOT / "data" / args.kind / "batches"
 
     tagged = set()
     if TAGS_JSON.exists():

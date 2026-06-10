@@ -1,21 +1,28 @@
 #!/usr/bin/env python
-"""Stage C of the topic-map pipeline.
+"""Stage C of the map pipeline (taxonomy-agnostic).
 
-Combine the corpus (proceedings + workshop papers) with the LLM topic tags and
-emit the two JSON files the visualization consumes:
+Combine the corpus (proceedings + workshop papers) with the LLM category tags
+and emit the JSON the visualization consumes:
 
-  site/assets/json/topic_graph.json  — {nodes, edges, meta}
-      nodes: one per taxonomy topic with >=1 paper {id,label,group,count,paperIds}
-      edges: topic pairs co-occurring on >= EDGE_MIN papers {source,target,weight}
-  site/assets/json/topic_papers.json — {id: {title,abstract,authors,source,workshop,code,url,primary,topics}}
+  site/assets/json/<prefix>_graph.json — {nodes, edges, meta}
+      nodes: one per category with >=1 paper {id,label,group,color,count,paperIds}
+      edges: category pairs co-occurring on >= EDGE_MIN papers {source,target,weight}
+      meta:  {papers, edge_min, groups:[{group,color}]}  (groups drive the legend)
+  site/assets/json/topic_papers.json — {id: {title,abstract,authors,source,workshop,code,url}}
+      Shared by every map (paper metadata is the same regardless of categorization).
+
+--kind topics    → taxonomy.py,          site/assets/json/topic_graph.json
+--kind platforms → taxonomy_platform.py, site/assets/json/platform_graph.json
 
 Usage:
-    python scripts/topics/build_graph.py [--edge-min 3]
+    python scripts/topics/build_graph.py --kind topics    [--edge-min 6]
+    python scripts/topics/build_graph.py --kind platforms [--edge-min 6]
 """
 
 from __future__ import annotations
 
 import argparse
+import importlib
 import json
 import sys
 from itertools import combinations
@@ -23,48 +30,49 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts" / "topics"))
-from taxonomy import TOPICS  # noqa: E402
 
 METADATA_JSON = ROOT / "data" / "metadata.json"
 WORKSHOP_JSON = ROOT / "data" / "workshop_papers.json"
-TAGS_JSON = ROOT / "data" / "topics" / "tags.json"
 OUT_DIR = ROOT / "site" / "assets" / "json"
-GRAPH_JSON = OUT_DIR / "topic_graph.json"
-PAPERS_JSON = OUT_DIR / "topic_papers.json"
+PAPERS_JSON = OUT_DIR / "topic_papers.json"  # shared across maps
 
-TOPIC_BY_ID = {t["id"]: t for t in TOPICS}
+PREFIX = {"topics": "topic", "platforms": "platform"}
 
 
 def load_papers() -> dict[str, dict]:
     """id -> full paper record for both sources."""
     papers: dict[str, dict] = {}
     for r in json.loads(METADATA_JSON.read_text(encoding="utf-8")):
-        pid = f"pp:{r['id']}"
-        papers[pid] = {
+        papers[f"pp:{r['id']}"] = {
             "title": r["title"], "abstract": r["abstract"], "authors": r["authors"],
-            "source": "proceedings", "workshop": None, "code": r.get("code", ""),
-            "url": "",
+            "source": "proceedings", "workshop": None, "code": r.get("code", ""), "url": "",
         }
     for r in json.loads(WORKSHOP_JSON.read_text(encoding="utf-8")):
         papers[r["id"]] = {
             "title": r["title"], "abstract": r["abstract"], "authors": r["authors"],
-            "source": "workshop", "workshop": r.get("workshop"), "code": r.get("code", ""),
-            "url": r.get("source_url", ""),
+            "source": "workshop", "workshop": r.get("workshop"),
+            "code": r.get("code", ""), "url": r.get("source_url", ""),
         }
     return papers
 
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser()
+    ap.add_argument("--kind", default="topics", choices=["topics", "platforms"])
     ap.add_argument("--edge-min", type=int, default=6, help="min co-occurrence to draw an edge")
     args = ap.parse_args(argv)
 
-    if not TAGS_JSON.exists():
-        print(f"Missing {TAGS_JSON} — run tag_topics.py first.", file=sys.stderr)
+    tax = importlib.import_module("taxonomy" if args.kind == "topics" else "taxonomy_platform")
+    TOPICS, BY_ID, COLORS = tax.TOPICS, {t["id"]: t for t in tax.TOPICS}, tax.GROUP_COLORS
+    tags_json = ROOT / "data" / args.kind / "tags.json"
+    graph_json = OUT_DIR / f"{PREFIX[args.kind]}_graph.json"
+
+    if not tags_json.exists():
+        print(f"Missing {tags_json} — tag this kind first.", file=sys.stderr)
         return 2
 
     papers = load_papers()
-    tags = json.loads(TAGS_JSON.read_text(encoding="utf-8"))
+    tags = json.loads(tags_json.read_text(encoding="utf-8"))
 
     node_papers: dict[str, list[str]] = {t["id"]: [] for t in TOPICS}
     edge_w: dict[tuple[str, str], int] = {}
@@ -73,17 +81,15 @@ def main(argv: list[str] | None = None) -> int:
     for pid, tag in tags.items():
         if pid not in papers:
             continue
-        topics = [t for t in tag.get("topics", []) if t in TOPIC_BY_ID]
-        if not topics:
+        cats = [t for t in tag.get("topics", []) if t in BY_ID]
+        if not cats:
             continue
-        for t in topics:
+        for t in cats:
             node_papers[t].append(pid)
-        for a, b in combinations(sorted(set(topics)), 2):
+        for a, b in combinations(sorted(set(cats)), 2):
             edge_w[(a, b)] = edge_w.get((a, b), 0) + 1
-        rec = dict(papers[pid])
-        rec["topics"] = topics
-        rec["primary"] = tag.get("primary", topics[0])
-        out_papers[pid] = rec
+        if pid not in out_papers:
+            out_papers[pid] = dict(papers[pid])
 
     nodes = []
     for t in TOPICS:
@@ -92,6 +98,7 @@ def main(argv: list[str] | None = None) -> int:
             continue
         nodes.append({
             "id": t["id"], "label": t["label"], "group": t["group"],
+            "color": COLORS.get(t["group"], "#9aa4b2"),
             "count": len(ids), "paperIds": ids,
         })
     live = {n["id"] for n in nodes}
@@ -101,22 +108,26 @@ def main(argv: list[str] | None = None) -> int:
         if w >= args.edge_min and a in live and b in live
     ]
     edges.sort(key=lambda e: -e["weight"])
+    live_groups = [g for g in COLORS if any(n["group"] == g for n in nodes)]
+    groups_meta = [{"group": g, "color": COLORS[g]} for g in live_groups]
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    GRAPH_JSON.write_text(json.dumps(
+    graph_json.write_text(json.dumps(
         {"nodes": nodes, "edges": edges,
-         "meta": {"papers": len(out_papers), "edge_min": args.edge_min}},
+         "meta": {"kind": args.kind, "papers": len(out_papers),
+                  "edge_min": args.edge_min, "groups": groups_meta}},
         indent=1, ensure_ascii=False), encoding="utf-8")
+    # Refresh the shared papers file (only proceedings/workshop fields).
     PAPERS_JSON.write_text(json.dumps(out_papers, indent=1, ensure_ascii=False), encoding="utf-8")
 
-    print(f"Wrote {len(nodes)} nodes, {len(edges)} edges → {GRAPH_JSON}")
-    print(f"Wrote {len(out_papers)} papers → {PAPERS_JSON}")
-    print("\nTop topics by paper count:")
+    print(f"[{args.kind}] {len(nodes)} nodes, {len(edges)} edges → {graph_json}")
+    print(f"          {len(out_papers)} papers → {PAPERS_JSON}")
+    print("\nTop categories by paper count:")
     for n in sorted(nodes, key=lambda n: -n["count"])[:12]:
         print(f"  {n['count']:4}  {n['label']}")
-    print("\nStrongest topic connections:")
+    print("\nStrongest connections:")
     for e in edges[:10]:
-        print(f"  {e['weight']:4}  {TOPIC_BY_ID[e['source']]['label']} — {TOPIC_BY_ID[e['target']]['label']}")
+        print(f"  {e['weight']:4}  {BY_ID[e['source']]['label']} — {BY_ID[e['target']]['label']}")
     return 0
 
 

@@ -17,6 +17,8 @@
   "use strict";
 
   var BASE = (window.TOPIC_DATA_BASE || "./").replace(/\/?$/, "/");
+  var GRAPH_FILE = window.TOPIC_GRAPH_FILE || "topic_graph.json";
+  var PAPERS_FILE = window.TOPIC_PAPERS_FILE || "topic_papers.json";
 
   // Coarse super-category -> colour. 3Blue1Brown / Manim palette.
   var GROUP_COLORS = {
@@ -41,8 +43,8 @@
   function el(id) { return document.getElementById(id); }
 
   Promise.all([
-    fetch(BASE + "topic_graph.json").then(function (r) { return r.json(); }),
-    fetch(BASE + "topic_papers.json").then(function (r) { return r.json(); }),
+    fetch(BASE + GRAPH_FILE).then(function (r) { return r.json(); }),
+    fetch(BASE + PAPERS_FILE).then(function (r) { return r.json(); }),
   ]).then(function (res) {
     init(res[0], res[1]);
   }).catch(function (e) {
@@ -64,7 +66,7 @@
       elements.push({ data: {
         id: n.id, label: n.label, group: n.group, count: n.count,
         paperIds: n.paperIds,
-        color: GROUP_COLORS[n.group] || DEFAULT_COLOR,
+        color: n.color || GROUP_COLORS[n.group] || DEFAULT_COLOR,
         // node diameter 22..96 px, scaled by sqrt(count)
         size: 22 + 74 * Math.sqrt(n.count / maxCount),
       }});
@@ -282,8 +284,15 @@
     // --- legend -------------------------------------------------------------
     var legend = el("tm-legend");
     if (legend) {
-      legend.innerHTML = Object.keys(GROUP_COLORS).map(function (g) {
-        return '<span class="tm-leg"><i style="background:' + GROUP_COLORS[g] + '"></i>' + esc(g) + "</span>";
+      var groups = (graph.meta && graph.meta.groups) || [];
+      if (!groups.length) {  // fallback: derive from nodes
+        var seen = {};
+        graph.nodes.forEach(function (n) {
+          if (!seen[n.group]) { seen[n.group] = 1; groups.push({ group: n.group, color: n.color || GROUP_COLORS[n.group] || DEFAULT_COLOR }); }
+        });
+      }
+      legend.innerHTML = groups.map(function (g) {
+        return '<span class="tm-leg"><i style="background:' + esc(g.color) + '"></i>' + esc(g.group) + "</span>";
       }).join("");
     }
 

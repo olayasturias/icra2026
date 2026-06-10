@@ -1,9 +1,9 @@
 ---
 layout: page
-title: ICRA 2026 Topic Map
-permalink: /topics/
+title: ICRA 2026 Platform Map
+permalink: /platforms/
 nav: true
-nav_order: 5
+nav_order: 6
 description: An interactive map of ICRA 2026 — proceedings and workshop papers organized by topic. Node size is the number of papers; edges link topics that share papers. Click a topic to list its papers, click a title to read the abstract.
 ---
 
@@ -74,7 +74,7 @@ description: An interactive map of ICRA 2026 — proceedings and workshop papers
 
 <div class="tm-app">
   <div class="tm-eyebrow">ICRA 2026 · Proceedings &amp; Workshops</div>
-  <h2 class="tm-h">Topic Map</h2>
+  <h2 class="tm-h">Robot-Platform Map</h2>
   <p class="tm-sub">{{ page.description }}</p>
   <div id="tm-controls">
     <input id="tm-search" type="search" placeholder="Search papers — title or author…" />
@@ -91,5 +91,5 @@ description: An interactive map of ICRA 2026 — proceedings and workshop papers
 <script src="https://unpkg.com/cose-base@2.2.0/cose-base.js"></script>
 <script src="https://unpkg.com/cytoscape@3.30.2/dist/cytoscape.min.js"></script>
 <script src="https://unpkg.com/cytoscape-fcose@2.2.0/cytoscape-fcose.js"></script>
-<script>window.TOPIC_DATA_BASE = "{{ '/assets/json/' | relative_url }}";</script>
+<script>window.TOPIC_DATA_BASE = "{{ '/assets/json/' | relative_url }}"; window.TOPIC_GRAPH_FILE = "platform_graph.json";</script>
 <script src="{{ '/assets/js/topic-graph.js' | relative_url }}"></script>

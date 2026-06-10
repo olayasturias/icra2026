@@ -11,20 +11,17 @@ Usage:
 
 from __future__ import annotations
 
+import argparse
+import importlib
 import json
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts" / "topics"))
-from taxonomy import IDS  # noqa: E402
-
-OUT_DIR = ROOT / "data" / "topics" / "out"
-TAGS_JSON = ROOT / "data" / "topics" / "tags.json"
-VALID = set(IDS)
 
 
-def clean(entry: dict) -> dict | None:
+def clean(entry: dict, VALID: set) -> dict | None:
     topics = [t for t in entry.get("topics", []) if t in VALID]
     primary = entry.get("primary")
     if primary not in VALID:
@@ -43,7 +40,15 @@ def clean(entry: dict) -> dict | None:
     return {"topics": ordered[:4], "primary": primary or ordered[0]}
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--kind", default="topics", choices=["topics", "platforms"])
+    args = ap.parse_args(argv)
+    tax = importlib.import_module("taxonomy" if args.kind == "topics" else "taxonomy_platform")
+    VALID = set(tax.IDS)
+    OUT_DIR = ROOT / "data" / args.kind / "out"
+    TAGS_JSON = ROOT / "data" / args.kind / "tags.json"
+
     tags = {}
     if TAGS_JSON.exists():
         tags = json.loads(TAGS_JSON.read_text(encoding="utf-8"))
@@ -57,7 +62,7 @@ def main() -> int:
             print(f"  skip {f.name}: {e}")
             continue
         for pid, entry in data.items():
-            c = clean(entry) if isinstance(entry, dict) else None
+            c = clean(entry, VALID) if isinstance(entry, dict) else None
             if c:
                 if pid not in tags:
                     added += 1
