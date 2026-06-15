@@ -248,7 +248,8 @@
     "ws:semantics-for-reliable-robot-autonomy-from-environment-under_31",
     "ws:synthetic-data-for-robot-learning_05",
     "ws:workshop-on-open-challenges-for-rigorous-robot-perception_09"
-   ]
+   ],
+   "icon": "uav-multirotor.png"
   },
   {
    "id": "ugv",
@@ -995,7 +996,8 @@
     "ws:vitac-learning-to-see-and-feel-vision-tactile-synergy-for-em_20",
     "ws:workshop-on-frontiers-of-optimization-for-robotics-2nd-editi_02",
     "ws:workshop-on-intelligent-space-robotics-and-systems_10"
-   ]
+   ],
+   "icon": "legged.svg"
   },
   {
    "id": "humanoid",
@@ -1142,7 +1144,8 @@
     "ws:uncertainty-in-open-world-robotics_10",
     "ws:workshop-on-reinforcement-learning-in-the-era-of-imitation-l_03",
     "ws:xplore-cross-disciplinary-aspects-of-exploration-in-robotics_08"
-   ]
+   ],
+   "icon": "humanoid2.svg"
   },
   {
    "id": "arm",
@@ -1742,7 +1745,8 @@
     "ws:xplore-cross-disciplinary-aspects-of-exploration-in-robotics_16",
     "ws:xplore-cross-disciplinary-aspects-of-exploration-in-robotics_20",
     "ws:xplore-cross-disciplinary-aspects-of-exploration-in-robotics_25"
-   ]
+   ],
+   "icon": "robotarm.svg"
   },
   {
    "id": "hand",
@@ -1927,7 +1931,8 @@
     "ws:vitac-learning-to-see-and-feel-vision-tactile-synergy-for-em_19",
     "ws:vitac-learning-to-see-and-feel-vision-tactile-synergy-for-em_20",
     "ws:workshop-on-open-challenges-for-rigorous-robot-perception_15"
-   ]
+   ],
+   "icon": "hand.png"
   },
   {
    "id": "mobile_manip",
@@ -2175,7 +2180,8 @@
     "ws:workshop-on-open-challenges-for-rigorous-robot-perception_16",
     "ws:xplore-cross-disciplinary-aspects-of-exploration-in-robotics_12",
     "ws:xplore-cross-disciplinary-aspects-of-exploration-in-robotics_21"
-   ]
+   ],
+   "icon": "marine.svg"
   },
   {
    "id": "space",
@@ -2268,7 +2274,8 @@
     "ws:workshop-on-intelligent-space-robotics-and-systems_26",
     "ws:workshop-on-intelligent-space-robotics-and-systems_27",
     "ws:workshop-on-intelligent-space-robotics-and-systems_28"
-   ]
+   ],
+   "icon": "space.svg"
   },
   {
    "id": "soft",
@@ -2357,7 +2364,8 @@
     "ws:geometry-in-the-age-of-data-driven-robotics_17",
     "ws:workshop-on-intelligent-space-robotics-and-systems_06",
     "ws:workshop-on-intelligent-space-robotics-and-systems_11"
-   ]
+   ],
+   "icon": "softrobot.svg"
   },
   {
    "id": "medical",
@@ -2547,7 +2555,8 @@
     "pp:6227",
     "pp:6288",
     "ws:4th-workshop-on-neurodesign-in-human-robot-interaction_01"
-   ]
+   ],
+   "icon": "exoeskeleton.svg"
   },
   {
    "id": "micro",
@@ -2620,7 +2629,8 @@
     "pp:6110",
     "pp:6123",
     "pp:6134"
-   ]
+   ],
+   "icon": "unconventional.svg"
   },
   {
    "id": "multi",

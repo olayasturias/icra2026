@@ -38,6 +38,15 @@ PAPERS_JSON = OUT_DIR / "topic_papers.json"  # shared across maps
 
 PREFIX = {"topics": "topic", "platforms": "platform"}
 
+# Optional background-image icon (in assets/img/) per node, by kind+id.
+ICONS = {
+    "platforms": {"uav": "uav-multirotor.png", "humanoid": "humanoid2.svg",
+                  "legged": "legged.svg", "soft": "softrobot.svg",
+                  "space": "space.svg", "wearable": "exoeskeleton.svg",
+                  "marine": "marine.svg", "hand": "hand.png",
+                  "micro": "unconventional.svg", "arm": "robotarm.svg"},
+}
+
 
 def load_papers() -> dict[str, dict]:
     """id -> full paper record for both sources."""
@@ -91,16 +100,20 @@ def main(argv: list[str] | None = None) -> int:
         if pid not in out_papers:
             out_papers[pid] = dict(papers[pid])
 
+    icons = ICONS.get(args.kind, {})
     nodes = []
     for t in TOPICS:
         ids = node_papers[t["id"]]
         if not ids:
             continue
-        nodes.append({
+        node = {
             "id": t["id"], "label": t["label"], "group": t["group"],
             "color": COLORS.get(t["group"], "#9aa4b2"),
             "count": len(ids), "paperIds": ids,
-        })
+        }
+        if t["id"] in icons:
+            node["icon"] = icons[t["id"]]
+        nodes.append(node)
     live = {n["id"] for n in nodes}
     edges = [
         {"source": a, "target": b, "weight": w}

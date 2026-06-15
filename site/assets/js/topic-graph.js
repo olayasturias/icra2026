@@ -19,6 +19,8 @@
   var BASE = (window.TOPIC_DATA_BASE || "./").replace(/\/?$/, "/");
   var GRAPH_FILE = window.TOPIC_GRAPH_FILE || "topic_graph.json";
   var PAPERS_FILE = window.TOPIC_PAPERS_FILE || "topic_papers.json";
+  // Node background icons live in assets/img/ (sibling of the json dir).
+  var ICON_BASE = (window.TOPIC_ICON_BASE || BASE.replace(/json\/?$/, "img/")).replace(/\/?$/, "/");
 
   // Coarse super-category -> colour. 3Blue1Brown / Manim palette.
   var GROUP_COLORS = {
@@ -69,6 +71,7 @@
         color: n.color || GROUP_COLORS[n.group] || DEFAULT_COLOR,
         // node diameter 22..96 px, scaled by sqrt(count)
         size: 22 + 74 * Math.sqrt(n.count / maxCount),
+        iconUrl: n.icon ? ICON_BASE + n.icon : "",
       }});
     });
     graph.edges.forEach(function (e) {
@@ -77,6 +80,15 @@
         weight: e.weight, width: 1 + 7 * (e.weight / maxWeight),
       }});
     });
+
+    // Topic map: labels centered inside the node (light text, dark outline).
+    // Platform map: labels below the node, coloured to match, no outline.
+    var labelsInside = !(graph.meta && graph.meta.kind === "platforms");
+    var labColor = labelsInside ? "#eef4ff" : "data(color)";
+    var labValign = labelsInside ? "center" : "bottom";
+    var labMargin = labelsInside ? 0 : 5;
+    var labMaxW = labelsInside ? "data(size)" : 110;
+    var labOutline = labelsInside ? 2.6 : 0;
 
     var cy = window.cytoscape({
       container: el("tm-graph"),
@@ -90,14 +102,21 @@
           "label": "data(label)",
           "font-size": 11, "font-weight": 600,
           "font-family": "\"Source Serif 4\", Charter, Georgia, serif",
-          "color": "#eef4ff",
-          "text-valign": "center", "text-halign": "center",
-          "text-wrap": "wrap", "text-max-width": "data(size)",
-          "text-outline-color": "#0a0c16", "text-outline-width": 2.6,
+          "color": labColor,
+          "text-valign": labValign, "text-halign": "center", "text-margin-y": labMargin,
+          "text-wrap": "wrap", "text-max-width": labMaxW,
+          "text-outline-color": "#0a0c16", "text-outline-width": labOutline,
           // circular ring (no box); transparent until highlighted
           "border-width": 3, "border-color": "data(color)", "border-opacity": 0,
           "transition-property": "opacity border-opacity border-width",
           "transition-duration": "150ms",
+        }},
+        { selector: "node[iconUrl != '']", style: {
+          "background-image": "data(iconUrl)",
+          "background-fit": "contain",
+          "background-clip": "node",
+          "background-image-opacity": 0.85,
+          "background-image-containment": "over",
         }},
         { selector: "edge", style: {
           "width": "data(width)", "line-color": "#39507a",
@@ -201,7 +220,13 @@
 
     // paperIds per topic, kept off the cy nodes for convenience
     var graphPaperIds = {};
-    graph.nodes.forEach(function (n) { graphPaperIds[n.id] = n.paperIds || []; });
+    var paperTopics = {};  // inverse: paper id -> [topic id, ...]
+    graph.nodes.forEach(function (n) {
+      graphPaperIds[n.id] = n.paperIds || [];
+      (n.paperIds || []).forEach(function (pid) {
+        (paperTopics[pid] || (paperTopics[pid] = [])).push(n.id);
+      });
+    });
 
     function showSearchResults() {
       var ids = [];
@@ -265,7 +290,7 @@
         Object.keys(papers).forEach(function (pid) {
           if (paperMatches(papers[pid], q)) {
             matchSet.add(pid);
-            (papers[pid].topics || []).forEach(function (t) { topicsHit.add(t); });
+            (paperTopics[pid] || []).forEach(function (t) { topicsHit.add(t); });
           }
         });
         highlightTopics(topicsHit);
